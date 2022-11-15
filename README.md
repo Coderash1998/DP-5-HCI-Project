@@ -18,6 +18,7 @@ There are to ways to run this:
 
 1. You can directly access the webpage through this URL: 
 2. You can clone this repository and start by opening index.html.
+Hosted at: https://finalprod.d3a9pn36sf6i9j.amplifyapp.com
 
 # Page Descriptions and Functionalities
 
