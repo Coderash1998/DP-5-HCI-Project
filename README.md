@@ -99,6 +99,11 @@ It has got 4 fields:
  
  This page has got only the Home button.
  
+ 10. Friends Page
+
+ This page shows new friend request from other people and also the user's friends list. The user can accept or reject the friend requests, view the profile of the people, send messages and also see the match percentage.
+ 
+ The friends list shows the users friends. Each of the friend's placard has the information about common friends, interests and an "Add to Emergency Contacts" button where the user can add the emergency contacts from the friends list.
 
 
  
