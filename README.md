@@ -146,6 +146,6 @@ It has got 4 fields:
    
 # Links:
 1. Web App is Hosted on AWS amplify: https://finalprod.d3a9pn36sf6i9j.amplifyapp.com
-2. The Video Demo with narration: https://vimeo.com/771012474/8e648c74fd
+2. The Video Demo with narration: https://www.youtube.com/watch?v=2Cwbsfx36K0
 3. GitHub Page from where you can download the pages: https://github.com/Coderash1998/DP-5-HCI-Project
  
