@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="../JavaScript/LogIn.js"></script>
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="../CSS/LogIn.css">
+
+    <!--<title>Login & Registration Form</title>-->
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="forms">
+
+            <!-- Registration Form -->
+            <div class="form signup">
+                <span class="title">Reconnect</span>
+
+                <form action="#" id="signupform">
+
+                    <div class="input-field">
+                        <input type="text" id='myMail' placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                        <span id="emailError"></span>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id='myPassword' class="password" placeholder="Enter the password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye showHidePw"></i>
+                        <span id="errorPassword"></span>
+                    </div>
+
+
+                    <div class="input-field button">
+                        <input type="button" onclick="ValidateEmail();return false" value="Login">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Not yet a connect?
+                        <a href="SignUp.html" class="text login-link" >Reconnect Now</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="../JS/LogIn.js"></script> -->
+</body>
+
+</html>

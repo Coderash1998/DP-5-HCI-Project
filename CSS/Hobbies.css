@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+}
+
+.container {
+    padding: 3rem;
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.image {
+    display: block;
+    width: 100%;
+}
+
+.caption {
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 4px;
+}
+
+.myClickState {
+    opacity: 0.3;
+    border-style: solid;
+    border-color: blue;
+    border-width: thick;
+}
+
+.col-sm-6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

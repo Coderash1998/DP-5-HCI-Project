@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Re-Connect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="../CSS/Expertise.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../Source/reconnect_logo.ico" />
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Re-Connect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+<main>
+
+    <div class="container-fluid">
+        <div class="justify-center">
+            <div class="col-sm-8 offset-2">
+                <div class="heading">
+                    <h1 class="title h2 text-center">Choose Expertise</h1>
+                </div>
+                <form class="hobby_filters">
+
+                    <div class="row">
+
+                        <div class="input-group w-25 col">
+                            <input type="text" class="form-control" placeholder="Keyword" aria-label="Keyword" aria-describedby="keyword_search">
+                            <button class="input-group-text" id="keyword_search">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="col-sm-6"> </div>
+
+                        <div class="input-group w-25 col">
+                            <input type="text" class="form-control" placeholder="Distance" aria-label="Distance" aria-describedby="distance_miles">
+                            <button class="input-group-text" id="distance_miles">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM2.906 5.189l.956-1.913A.5.5 0 0 1 4.309 3h7.382a.5.5 0 0 1 .447.276l.956 1.913a.51.51 0 0 1-.497.731c-.91-.073-3.35-.17-4.597-.17-1.247 0-3.688.097-4.597.17a.51.51 0 0 1-.497-.731Z"/>
+                            </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+
+                <!-- List of hobbies selected -->
+                <p></p>
+                <ul class="hobby_list list-unstyled">
+                    <li class="hobby_list" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
+                        <div class="hobby-list-item">
+                            <div class="logo">
+                                <figure>
+                                    <img class="hobby_logo img-fluid img-thumbnail" src="../Source/Old-people-playing-chess.jpg" alt="Singing">
+                                </figure>
+                            </div>
+                            <div class="hobby-info">
+                                <h4 class="hobby-title">
+                                    Chess
+                                </h4>
+                                <div class="about-hobby">
+                                    <span class="description mute ellipsis">Chess is an abstract strategy game and involves no hidden information. It is played on a chessboard with 64 squares arranged in an eight-by-eight grid.</span>
+                                    <span class="hobby-name color-primary ellipsis">Experience: 2-5 yrs</span>
+                                    <span class="hobby-name color-primary ellipsis">Style: Bullet</span>
+                                    <span class="hobby-name color-primary ellipsis">Audience: 0 people</span>
+                                </div>
+                            </div>
+                            <div class="hobby-listing-meta">
+                                <ul class="hobby-types-lists ellipsis list-unstyled">
+                                    <li class="hobby-type list-unstyled" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
+                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="hobby_list" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
+                        <div class="hobby-list-item">
+                            <div class="logo">
+                                <figure>
+                                    <img class="hobby_logo img-fluid img-thumbnail" src="../Source/Fishing.jpg" alt="Dancing">
+                                </figure>
+                            </div>
+                            <div class="hobby-info">
+                                <h4 class="hobby-title">
+                                    Fishing
+                                </h4>
+                                <div class="about-hobby">
+                                    <span class="description mute ellipsis">Fishing is the activity of trying to catch fish.</span>
+                                    <span class="hobby-name color-primary ellipsis">Experience: 1 yr</span>
+                                    <span class="hobby-name color-primary ellipsis">Style: Rod Fishing</span>
+                                    <span class="hobby-name color-primary ellipsis">Audience: 5 people</span>
+                                </div>
+                            </div>
+                            <div class="hobby-listing-meta">
+                                <ul class="hobby-types-lists ellipsis list-unstyled">
+                                    <li class="hobby-type list-unstyled">
+                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="hobby_list" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
+                        <div class="hobby-list-item">
+                            <div class="logo">
+                                <figure>
+                                    <img class="hobby_logo img-fluid img-thumbnail" src="../Source/Gardening.jpg" alt="Dancing">
+                                </figure>
+                            </div>
+                            <div class="hobby-info">
+                                <h4 class="hobby-title">
+                                    Gardening
+                                </h4>
+                                <div class="about-hobby">
+                                    <span class="description mute ellipsis">Gardening is about finding the right combination of sunlight, fertile soil, and water to make your plants thrive.</span>
+                                    <span class="hobby-name color-primary ellipsis">Experience: 10+ yrs</span>
+                                    <span class="hobby-name color-primary ellipsis">Style: Organic</span>
+                                    <span class="hobby-name color-primary ellipsis">Audience: 0 people</span>
+                                </div>
+                            </div>
+                            <div class="hobby-listing-meta">
+                                <ul class="hobby-types-lists ellipsis list-unstyled">
+                                    <li class="hobby-type list-unstyled">
+                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <a href="Hobbies.html" class="btn btn-danger" role="button">Previous</a>
+                <a href="Profile.html" class="btn btn-success" role="button" style="float: right;">Next</a>
+
+                <!-- Modal Singing -->
+                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="editModalLabel">Details of Activity</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Experience</label>
+                                        <div id="exprHelp" class="form-text">How long have you been doing this activity?</div>
+                                        <select class="form-control" id="groups-order-by" data-bp-filter="groups">
+                                            <option value="active">1 yr</option>
+                                            <option value="popular">2-5 yrs</option>
+                                            <option value="newest">5-10 yrs</option>
+                                            <option value="alphabetical">10+ yrs</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputStyle" class="form-label">Style</label>
+                                        <div id="styleHelp" class="form-text">What styles are you interested in?</div>
+                                        <input type="text" class="form-control" id="editInputStyle" aria-describedby="styleHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputAudi" class="form-label">Audience</label>
+                                        <div id="audienceHelp" class="form-text">How many people have you taught?</div>
+                                        <input type="text" class="form-control" id="editInputAudi" aria-describedby="audienceHelp">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

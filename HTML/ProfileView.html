@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Re-Connect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="../CSS/Profile.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../Source/reconnect_logo.ico" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="Home.html">Re-Connect</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row justify-content-center align-items-center inner-row">
+            <div class="col-md-5">
+                <div class="form-box p-5">
+                    <div class="form-title align-items-center mb-3 text-center">
+                        <h1 class="title h2 text-center">Profile</h1>
+                        <img src="../Source/Camping.jpg" alt="Profile" class="img-thumbnail rounded-circle">
+                    </div>
+                    <form action="">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control form-control-sm" placeholder="First Name" id="floatingInput1" value="John" readonly>
+                            <label for="floatingInput">First Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control form-control-sm" placeholder="Last Name" id="floatingInput2" value="Doe" readonly>
+                            <label for="floatingInput">Last Name</label>
+                        </div>
+
+                        <div class="d-flex">
+
+                            <div class="form-floating ">
+                                <input type="number" pattern="[0-9]{10}" minlength="10" maxlength="10" class="form-control form-control-sm" placeholder="Age" id="floatingInput3">
+                                <label for="floatingInput">Age</label>
+                            </div>
+                            <div class="p-2"></div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control form-control-sm" placeholder="city" id="floatingInput4">
+                                <label for="floatingInput">City</label>
+                            </div>
+                            <div class="p-2"></div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control form-control-sm" placeholder="State" id="floatingInput">
+                                <label for="floatingInput">State</label>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <a href="Home.html" class="btn btn-success" role="button">Submit</a>
+                            <a href="Hobbies.html" class="btn btn-danger" role="button">Reset</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
