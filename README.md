@@ -12,7 +12,7 @@ The following Goals have been achieved:
 
 All the pages are static and are limited to HTML, CSS, JavaScript, and BootStrap.
 
-## How to run
+# How to run
 
 There are to ways to run this:
 
