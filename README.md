@@ -105,8 +105,8 @@ It has got 4 fields:
  
  The friends list shows the users friends. Each of the friend's placard has the information about common friends, interests and an "Add to Emergency Contacts" button where the user can add the emergency contacts from the friends list.
 
-#Flow
-##Task - 1
+# Flow
+## Task - 1
 
  Here the user can either SignUp or LogIn.
  
@@ -117,14 +117,14 @@ It has got 4 fields:
   4. At this Profile.html, the user can set his/her/other name, age, location and finally set their profile. From here also we can either go back to reset the prefereces or click submit.
   5. After clicking Submit, the first task at hand is done. We reach Home.html.
 
-##Task - 2
+## Task - 2
 
  Here the user can access emergency page.
  
  1. Emeregecy.html page can reached from any page, other than Hobbies.html, Expertise.html and Profile.html. This page can be access from ProfileView.html. That is after first setup of profile, within app, user can access this page from any page.
  2. At Emergency. according to the order of emeregecy, the user can selected the provided option. On selecting any of the options, our app is expected to send emergency message, with location, number and user's details. Because our project is limited to only static pages, a sent affirmations with what all has been sent will appear on scree.
 
-##Task - 3
+## Task - 3
 
  Here the user can access People.html and Groups.html.
  
