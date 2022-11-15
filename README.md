@@ -26,18 +26,18 @@ There are two ways to run this:
 
 This is the first page, which appears when a user accesses the link.
 It has got 4 fields:
- 1. Email - here an email check is done to know, whether a valid mail is entered or not.
- 2. Password - here a password check is done, the password should be of length 6, and the password should contain, at least one numeric value, one capital letter, and one special character.
- 3. Re-Type Password - here a check is done, whether the entered password is the same as the previous field or not.
- 4. Phone Number - here a check is done, whether the entered value is numeric or not and of length 10 or not.
- 5. There is a checkbox user should click on before moving forward.
+ - Email - here an email check is done to know, whether a valid mail is entered or not.
+ - Password - here a password check is done, the password should be of length 6, and the password should contain, at least one numeric value, one capital letter, and one special character.
+ - Re-Type Password - here a check is done, whether the entered password is the same as the previous field or not.
+ - Phone Number - here a check is done, whether the entered value is numeric or not and of length 10 or not.
+ - There is a checkbox user should click on before moving forward.
 
 2. Login Page:
 
  The User can switch from the SignUp Page and vice versa. This page assumes that the user has already created an account.
  The mentioned fields are:
-  1. Email - here is a check to verify whether the mail is valid or not, and exists or not. The hardcoded value for this is 'admin@utdallas.edu'
-  2. Password - here is a check to verify whether the password is correct or not, and the hardcoded value for this field is: 'Admin@123'
+  - Email - here is a check to verify whether the mail is valid or not, and exists or not. The hardcoded value for this is 'admin@utdallas.edu'
+  - Password - here is a check to verify whether the password is correct or not, and the hardcoded value for this field is: 'Admin@123'
 
 3. Hobbies Page:
 
