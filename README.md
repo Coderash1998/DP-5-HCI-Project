@@ -14,10 +14,10 @@ All the pages are static and are limited to HTML, CSS, JavaScript, and BootStrap
 
 # How to run
 
-There are to ways to run this:
+There are two ways to run this:
 
 1. You can directly access the webpage through URL hosted at: https://finalprod.d3a9pn36sf6i9j.amplifyapp.com
-2. You can clone this repository and start by opening index.html.
+2. You can clone this repository and start by opening index.html
 
 
 # Page Descriptions and Functionalities
@@ -59,13 +59,14 @@ It has got 4 fields:
  As the name suggests, it allows the user to set their basic profile.
  
  The profile page has two roles:
-  1. When setting up the profile.
+ 
+  - When setting up the profile.
   
    When the person signs up for the first time, they have to follow from the SignUp Page, Hobbies Page, Expertise Page, and then Profile Page.
    At this time the user enters the basic details such as Name, Age, City, and State of residence. There is only submit button.
    After clicking on the submit button the user profile and preferences are set. Now the user moves to Home Page.
    
-  2. After setting up the profile.
+  - After setting up the profile.
 
    There may be situations, when the person may move to a different city and different location. So they can go to the profile page from the dropdown at the top right corner of any page after signing in. Select the profile and reach back to the profile page.
    Now Profile page will have Submit and Reset buttons.
