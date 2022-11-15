@@ -68,7 +68,7 @@ It has got 4 fields:
  Home Page is the page, where a user will get to upon accessing his/her/other account. This page, also has a brief summary about the various feature of the application, which will guide the user.
  From here all the pages will have the same navigation bar, except the emeregency page.
  
- 6.1 Navigation Bar
+ Navigation Bar
   The general Nav Bar, has got 'Home', 'Groups', 'People', 'Friends', 'Emeregecy' and the drop down at top right corner, which has features to 'Log Out' and 'Profile' to visit profile page.
   
 7. Groups Page
