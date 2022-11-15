@@ -21,3 +21,14 @@ h2{
     height: 250px;
     width: 250px;
 }
+
+.blink-me {
+    animation: blinker 1s linear infinite;
+    -webkit-text-stroke: 1px red;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
