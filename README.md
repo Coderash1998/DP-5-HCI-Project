@@ -3,6 +3,7 @@
 The project contains 11 HTML, 5 JavaScript, and 11 CSS files, and each of them are in the respective folders
 The Index page is the head page, that will allow the user to start the web app
 
+
 The following Goals have been achieved:
  1. The User can set up the profile from the SignUp Page
  2. The User can access the Home page, through Login Page
@@ -10,6 +11,13 @@ The following Goals have been achieved:
  4. Can connect to the emergency page, and according to the level of threat, different options can be chosen
 
 All the pages are static and are limited to HTML, CSS, JavaScript, and BootStrap.
+
+## How to run
+
+There are to ways to run this:
+
+1. You can directly access the webpage through this URL: 
+2. You can clone this repository and start by opening index.html.
 
 # Page Descriptions and Functionalities
 
