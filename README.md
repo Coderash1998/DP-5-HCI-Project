@@ -136,7 +136,10 @@ It has got 4 fields:
 
  Here the user can access People.html and Groups.html.
  
- 1. 
+ 1. From Home.html, and any children pages from then, user can access both People.html and Groups.html. 
+ 2. People.html page, suggests users various individuals in the locality according to their prefereces set, while setting up the profile.
+ 3. Groups.html page, suggests users various groups in the locality according to theri prefereces set, whilte setting up the profile.
+ 4. Both pages have the options to filter the provided options according to 'Last Active', 'Most Members', 'Newyly Created' and 'Alphabetical'.
  
    
 
