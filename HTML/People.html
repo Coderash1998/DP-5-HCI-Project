@@ -23,6 +23,8 @@
     </style>
     <link href="../CSS/People.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="../Source/reconnect_logo.ico" />
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -116,11 +118,11 @@
                             <li class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-avatar">
-                                        <img loading="lazy" src="../Source/Profile1.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="">
+                                        <img id="image1" loading="lazy" src="../Source/Profile1.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="">
                                     </div>
                                     <div class="item">
                                         <div class="item-block">
-                                            <h5 class="list-title groups-title">Susan Brown</h5>
+                                            <h5 class="list-title groups-title" id="name1">Susan Brown</h5>
                                             <p class="last-activity item-meta mute">
                                                 Active <span>10 hours ago</span> </p>
                                             <p class="item-meta group-details">10 Friends / 6 Groups</p>
@@ -130,7 +132,7 @@
                                                 </div>
                                             </p>
                                             <ul class="action">
-                                                <li class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile"><a>View Profile</a></li>
+                                                <li id="button1" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></li>
                                             </ul>
                                         </div>
 
@@ -143,11 +145,11 @@
                             <li class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-avatar">
-                                        <img loading="lazy" src="../Source/Profile2.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="">
+                                        <img id="image2" loading="lazy" src="../Source/Profile2.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="">
                                     </div>
                                     <div class="item">
                                         <div class="item-block">
-                                            <h5 class="list-title groups-title">Derek O'Brian</h5>
+                                            <h5 class="list-title groups-title" id="name2">Derek O'Brian</h5>
                                             <p class="last-activity item-meta mute">
                                                 Active <span>10 mins ago</span> </p>
                                             <p class="item-meta group-details">20 Friends / 2 Groups</p>
@@ -157,7 +159,7 @@
                                                 </div>
                                             </p>
                                             <ul class="action">
-                                                <li class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile"><a>View Profile</a></li>
+                                                <li id="button2" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></li>
                                             </ul>
                                         </div>
 
@@ -169,11 +171,11 @@
                             <li class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-avatar">
-                                        <img loading="lazy" src="../Source/Profile3.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="">
+                                        <img id="image3" loading="lazy" src="../Source/Profile3.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="">
                                     </div>
                                     <div class="item">
                                         <div class="item-block">
-                                            <h5 class="list-title groups-title">Maria Bloom</h5>
+                                            <h5 class="list-title groups-title" id="name3">Maria Bloom</h5>
                                             <p class="last-activity item-meta mute">
                                                 Active <span>10 hours ago</span> </p>
                                             <p class="item-meta group-details">12 Friends / 3 Groups</p>
@@ -183,7 +185,7 @@
                                                 </div>
                                             </p>
                                             <ul class="action">
-                                                <li class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile"><a>View Profile</a></li>
+                                                <li id="button3" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></li>
                                             </ul>
                                         </div>
 
@@ -198,11 +200,11 @@
                             <li class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-avatar">
-                                        <img loading="lazy" src="../Source/Profile4.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="">
+                                        <img id="image4" loading="lazy" src="../Source/Profile4.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="">
                                     </div>
                                     <div class="item">
                                         <div class="item-block">
-                                            <h5 class="list-title groups-title">Jeffery Mayer</h5>
+                                            <h5 class="list-title groups-title" id="name4">Jeffery Mayer</h5>
                                             <p class="last-activity item-meta mute">
                                                 Active <span>10 hours ago</span> </p>
                                             <p class="item-meta group-details">1 Friend / 1 Group</p>
@@ -212,7 +214,7 @@
                                                 </div>
                                             </p>
                                             <ul class="action">
-                                                <li class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile"><a>View Profile</a></li>
+                                                <li id="button4" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></li>
                                             </ul>
                                         </div>
 
@@ -225,11 +227,11 @@
                             <li class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-avatar">
-                                        <img loading="lazy" src="../Source/Profile5.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="Profile picture of Khabib Nurmagomedov">
+                                        <img id="image5" loading="lazy" src="../Source/Profile5.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="Profile picture of Khabib Nurmagomedov">
                                     </div>
                                     <div class="item">
                                         <div class="item-block">
-                                            <h5 class="list-title groups-title">Mary Sainz</h5>
+                                            <h5 class="list-title groups-title" id="name5">Mary Sainz</h5>
                                             <p class="last-activity item-meta mute">
                                                 Active <span>10 mins ago</span> </p>
                                             <p class="item-meta group-details">22 Friends / 8 Groups</p>
@@ -239,7 +241,7 @@
                                                 </div>
                                             </p>
                                             <ul class="action">
-                                                <li class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile"><a>View Profile</a></li>
+                                                <li id="button5" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></li>
                                             </ul>
                                         </div>
 
@@ -251,11 +253,11 @@
                             <li class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-avatar">
-                                        <img loading="lazy" src="../Source/Profile6.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="">
+                                        <img id="image6" loading="lazy" src="../Source/Profile6.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="">
                                     </div>
                                     <div class="item">
                                         <div class="item-block">
-                                            <h5 class="list-title groups-title">Lewis Green</h5>
+                                            <h5 class="list-title groups-title" id="name6">Lewis Green</h5>
                                             <p class="last-activity item-meta mute">
                                                 Active <span>10 hours ago</span> </p>
                                             <p class="item-meta group-details">15 Friends / 5 Groups</p>
@@ -265,7 +267,7 @@
                                                 </div>
                                             </p>
                                             <ul class="action">
-                                                <li class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile"><a>View Profile</a></li>
+                                                <li id="button6" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></li>
                                             </ul>
                                         </div>
 
@@ -286,11 +288,11 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <div class="inner">
-                            <img loading="lazy" src="../Source/Profile3.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="100">
+                            <img id="modalImage" loading="lazy" src="../Source/Profile3.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="100">
                         </div>
                     </div>
                     <div class="modal-body">
-                        <h4 class="modal-title">Maria Bloom</h4>
+                        <h4 class="modal-title" id="modalTitle">Maria Bloom</h4>
                         <div class="activity-info">
                             <div class="activity-details">
                                 <p>
@@ -298,17 +300,17 @@
                                 <p>
                                     <ax>Status:</ax> I love to paint landscapes and read novels during my leisure time.</p>
                                 <div class="submitx">
-                                    <button type="submitx" id="modal_login_submit" class="submit-login" name="wp-submit" data-bs-dismiss="modal">Send Request</button>
+                                    <button type="submitx" id="modal_login_submit" class="submit-login" name="wp-submit" data-bs-toggle="modal" data-bs-target="#successFriend">Send Request</button>
                                 </div>
                             </div>
                         </div>
                         <p></p>
                         <div class="input-group send-message">
-                            <input type="text" class="form-control" placeholder="Send a message">
+                            <input type="text" id="message" class="form-control" placeholder="Send a message">
                         </div>
                         <p></p>
                         <div class="submit">
-                            <button type="submity" style="float: left;" data-bs-dismiss="modal">Send Message</button>
+                            <button type="submity" id="messageButton" style="float: left;">Send Message</button>
                             <button type="submit-cancel" style="float: right;" data-bs-dismiss="modal">Cancel</button>
                         </div>
 
@@ -322,11 +324,51 @@
 
 
     </main>
+    <div class="modal fade" id="successMessage" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    Message sent succesfully!
+                </div>
+                <div >
+                    <button type="button" class="btn btn-secondary" style="float: right;" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="failureMessage" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    Chat should not be empty!
+                </div>
+                <div >
+                    <button type="button" class="btn btn-secondary" style="float: right;" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="modal fade" id="successFriend" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    Friend request sent!
+                </div>
+                <div >
+                    <button type="button" class="btn btn-secondary" style="float: right;" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="../JavaScript/common.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-
+    <script src="../JavaScript/People.js"></script>
 </body>
 
 </html>
