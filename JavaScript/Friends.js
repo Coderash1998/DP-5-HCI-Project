@@ -95,13 +95,14 @@ sendMessageButton1.addEventListener("click", textValidation1);
 
 function textValidation1() {
     let checkText1 = document.getElementById('message1').value;
-    if (checkText1===''){
+    if ((checkText1==='')){
         $('#viewJane').modal('show');
         $('#failureMessage').modal('show')
     }
     else{
         $('#viewJane').modal('hide');
         $('#successMessage').modal('show')
+        document.getElementById('message1').value=""
     }
 }
 
@@ -111,13 +112,14 @@ sendMessageButton2.addEventListener("click", textValidation2);
 
 function textValidation2() {
     let checkText2 = document.getElementById('message2').value;
-    if (checkText2===''){
+    if ((checkText2==='') ){
         $('#viewKurt').modal('show');
         $('#failureMessage').modal('show');
     }
     else{
         $('#viewKurt').modal('hide');
         $('#successMessage').modal('show');
+        document.getElementById('message2').value=""
     }
 }
 
@@ -128,12 +130,13 @@ sendMessageButton3.addEventListener("click", textValidation3);
 
 function textValidation3() {
     let checkText3 = document.getElementById('message3').value;
-    if (checkText3===''){
+    if ((checkText3==='')){
         $('#viewMorgan').modal('show');
         $('#failureMessage').modal('show')
     }
     else{
         $('#viewMorgan').modal('hide');
         $('#successMessage').modal('show')
+        document.getElementById('message3').value=""
     }
 }
