@@ -23,6 +23,7 @@
     </style>
     <link href="../CSS/Groups.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="../Source/reconnect_logo.ico" />
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -124,11 +125,11 @@
                                 <div class="list-wrap">
                                     <div class="item-cover" style="background-image: url('../Source/Reading2.jpg')"></div>
                                     <div class="item-avatar">
-                                        <img loading="lazy" src="../Source/Reading.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
+                                        <img id="image1" loading="lazy" src="../Source/Reading.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
                                     </div>
                                     <div class="item">
                                         <div class="item-block">
-                                            <h5 class="list-title groups-title">Reading</h5>
+                                            <h5 class="list-title groups-title" id="name1">Reading</h5>
                                             <p class="last-activity item-meta mute">
                                                 Active <span>10 hours ago</span> </p>
                                             <ul class="inline-members list-unstyled">
@@ -149,7 +150,7 @@
                                                 </div>
                                             </p>
                                             <ul class="action">
-                                                <li class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup"><a>View Group</a></li>
+                                                <li id="button1" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></li>
                                             </ul>
                                         </div>
 
@@ -163,13 +164,13 @@
                                 <div class="list-wrap">
                                     <div class="item-cover" style="background-image: url('../Source/Gardening2.jpg')"></div>
                                     <div class="item-avatar">
-                                        <img loading="lazy" src="../Source/Gardening.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
+                                        <img id="image2" loading="lazy" src="../Source/Gardening.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
                                     </div>
                                     <div class="item">
 
                                         <div class="item-block">
 
-                                            <h5 class="list-title groups-title">Gardening</h5>
+                                            <h5 class="list-title groups-title"id="name2">Gardening</h5>
 
                                             <p class="last-activity item-meta mute">
                                                 Active <span>15 hours ago</span> </p>
@@ -190,7 +191,7 @@
                                             </p>
 
                                             <ul class="action">
-                                                <li class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup"><a>View Group</a></li>
+                                                <li id="button2" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></li>
                                             </ul>
                                         </div>
 
@@ -205,14 +206,14 @@
                                     <div class="item-cover" style="background-image: url('../Source/Photography2.jpg')"></div>
 
                                     <div class="item-avatar">
-                                        <img loading="lazy" src="../Source/Photography.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
+                                        <img id="image3" loading="lazy" src="../Source/Photography.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
                                     </div>
 
                                     <div class="item">
 
                                         <div class="item-block">
 
-                                            <h5 class="list-title groups-title">Photography</h5>
+                                            <h5 class="list-title groups-title" id="name3">Photography</h5>
 
                                             <p class="last-activity item-meta mute">
                                                 Active <span>2 hours ago</span> </p>
@@ -241,7 +242,7 @@
 
 
                                             <ul class="action">
-                                                <li class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup"><a>View Group</a></li>
+                                                <li id="button3" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></li>
                                             </ul>
                                         </div>
 
@@ -258,12 +259,12 @@
                                 <div class="list-wrap">
                                     <div class="item-cover" style="background-image: url('../Source/Cooking2.jpg')"></div>
                                     <div class="item-avatar">
-                                        <img loading="lazy" src="../Source/Cooking.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
+                                        <img id="image4" loading="lazy" src="../Source/Cooking.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
                                     </div>
                                     <div class="item">
                                         <div class="item-block">
 
-                                            <h5 class="list-title groups-title">Cooking</h5>
+                                            <h5 id="name4" class="list-title groups-title">Cooking</h5>
 
                                             <p class="last-activity item-meta mute">
                                                 Active <span>2 mins ago</span> </p>
@@ -296,7 +297,7 @@
 
 
                                             <ul class="action">
-                                                <li class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup"><a>View Group</a></li>
+                                                <li id="button4" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></li>
                                             </ul>
                                         </div>
 
@@ -312,14 +313,14 @@
                                     <div class="item-cover" style="background-image: url('../Source/Travelling2.jpg')"></div>
 
                                     <div class="item-avatar">
-                                        <img loading="lazy" src="../Source/Travelling.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
+                                        <img id="image5" loading="lazy" src="../Source/Travelling.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
                                     </div>
 
                                     <div class="item">
 
                                         <div class="item-block">
 
-                                            <h5 class="list-title groups-title">Travelling</h5>
+                                            <h5 id="name5" class="list-title groups-title">Travelling</h5>
 
                                             <p class="last-activity item-meta mute">
                                                 Active <span>2 days ago</span> </p>
@@ -340,7 +341,7 @@
                                             </p>
 
                                             <ul class="action">
-                                                <li class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup"><a>View Group</a></li>
+                                                <li id="button5" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></li>
                                             </ul>
                                         </div>
 
@@ -355,14 +356,14 @@
                                     <div class="item-cover" style="background-image: url('../Source/Painting2.jpg')"></div>
 
                                     <div class="item-avatar">
-                                        <img loading="lazy" src="../Source/Painting.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
+                                        <img id="image6" loading="lazy" src="../Source/Painting.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
                                     </div>
 
                                     <div class="item">
 
                                         <div class="item-block">
 
-                                            <h5 class="list-title groups-title">Painting</h5>
+                                            <h5 class="list-title groups-title" id="name6">Painting</h5>
 
                                             <p class="last-activity item-meta mute">
                                                 Active <span>4 hours ago</span> </p>
@@ -394,7 +395,7 @@
 
 
                                             <ul class="action">
-                                                <li class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup"><a>View Group</a></li>
+                                                <li id="button6" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></li>
                                             </ul>
                                         </div>
 
@@ -415,11 +416,11 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <div class="inner">
-                            <img loading="lazy" src="../Source/Reading.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="100">
+                            <img id="modalImage" loading="lazy" src="../Source/Reading.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="100">
                         </div>
                     </div>
                     <div class="modal-body">
-                        <h4 class="modal-title">Reading</h4>
+                        <h4 class="modal-title" id="modalTitle">Reading</h4>
                         <div class="activity-info">
                             <div class="activity-details">
                                 <p>
@@ -427,17 +428,17 @@
                                 <p>
                                     <ax>Description:</ax> We meet weekly to read and talk about books based on a topic or an agreed-upon reading list.</p>
                                 <div class="submitx">
-                                    <button type="submitx" id="modal_login_submit" class="submit-login" name="wp-submit" data-bs-dismiss="modal">Join Group</button>
+                                    <button type="submitx" id="modal_login_submit" class="submit-login" name="wp-submit" data-bs-toggle="modal" data-bs-target="#successFriend">Join Group</button>
                                 </div>
                             </div>
                         </div>
                         <p></p>
                         <div class="input-group send-message">
-                            <input type="text" class="form-control" placeholder="Send a message to admin">
+                            <input type="text" id="message" class="form-control" placeholder="Send a message to admin">
                         </div>
                         <p></p>
                         <div class="submit">
-                            <button type="submity" style="float: left;" data-bs-dismiss="modal">Send Message</button>
+                            <button id ="messageButton" type="submity" style="float: left;" data-bs-dismiss="modal">Send Message</button>
                             <button type="submit-cancel" style="float: right;" data-bs-dismiss="modal">Cancel</button>
                         </div>
 
@@ -449,13 +450,54 @@
             </button>
         </div>
 
+        <div class="modal fade" id="successMessage" tabindex="-1" data-bs-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        Message sent succesfully!
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-secondary" style="float: right;" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="modal fade" id="failureMessage" tabindex="-1" data-bs-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        Chat should not be empty!
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-secondary" style="float: right;" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="modal fade" id="successFriend" tabindex="-1" data-bs-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        Group Join request sent!
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-secondary" style="float: right;" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </main>
 
     <script src="../JavaScript/common.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-
+    <script src="../JavaScript/Groups.js"></script>
 </body>
 
 </html>
