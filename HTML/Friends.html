@@ -263,14 +263,13 @@
                                     <h4 class="hobby-title ">Hank Pym</h4>
                                     <div class="about-hobby ">
                                         <span class="description mute ellipsis ">I like to build stuff and watch movies
-                                            <button type="button mt-3" class="btn btn-success" style="float: right;">Add
-                                                to Emergency Contacts</button>
+                                            <button id="Emergency1" type="button mt-3" class="btn btn-success" style="float: right;" value="Add to Emergency contacts">Add to Emergency contacts</button>
                                         </span>
                                         <span class="hobby-name color-primary ellipsis ">Groups: Fishing, Cooking
                                         </span>
                                         <span class="hobby-name color-primary ellipsis ">Common Friends: Scott, Hope,
                                             Cassie, Janet
-                                            <button type="message" style="float: right;">Message</button>
+                                            <button type="message" style="float: right;" data-bs-target="#sendMessage1" data-bs-toggle="modal">Message</button>
                                         </span>
                                         <span class="hobby-name color-primary ellipsis ">Age: 65</span>
 
@@ -290,14 +289,14 @@
                                     <h4 class="hobby-title ">Steve Rogers</h4>
                                     <div class="about-hobby ">
                                         <span class="description mute ellipsis ">I am a veteran and I like to read
-                                            books<button type="button mt-3" class="btn btn-success"
+                                            books<button id="Emergency2" type="button mt-3" class="btn btn-success"
                                                 style="float: right;">Add to Emergency Contacts</button>
                                         </span>
                                         <span class="hobby-name color-primary ellipsis ">Groups: Boxing,
                                             Meditation</span>
                                         <span class="hobby-name color-primary ellipsis ">Common Friends: Tony, Bruce,
                                             Natasha, Clint, Thor
-                                            <button type="message" style="float: right;">Message</button>
+                                            <button type="message" style="float: right;" data-bs-target="#sendMessage2" data-bs-toggle="modal">Message</button>
                                         </span>
                                         <span class="hobby-name color-primary ellipsis ">Age: 80</span>
 
@@ -327,11 +326,11 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="inner">
-                        <img loading="lazy" src="../Source/JaneDoe.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="100">
+                        <img loading="lazy" src="../Source/JaneDoe.jpg" class="avatar group-6-avatar avatar-200 photo align-items-center" width="150" height="150">
                     </div>
                 </div>
                 <div class="modal-body">
-                    <h4 class="modal-title">Jane Doe</h4>
+                    <h4 class="modal-title mt-5">Jane Doe</h4>
                     <div class="activity-info">
                         <div class="activity-details">
                             <p>
@@ -385,11 +384,11 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="inner">
-                        <img loading="lazy" src="../Source/KurtRussel.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="100">
+                        <img loading="lazy" src="../Source/KurtRussel.jpg" class="avatar group-6-avatar avatar-200 photo justify-center" width="150" height="150">
                     </div>
                 </div>
                 <div class="modal-body">
-                    <h4 class="modal-title">Kurt Russel</h4>
+                    <h4 class="modal-title mt-5">Kurt Russel</h4>
                     <div class="activity-info">
                         <div class="activity-details">
                             <p>
@@ -440,11 +439,11 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="inner">
-                        <img loading="lazy" src="../Source/MorganFreeman.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="100">
+                        <img loading="lazy" src="../Source/MorganFreeman.jpg" class="avatar group-6-avatar avatar-200 photo" width="150" height="150">
                     </div>
                 </div>
                 <div class="modal-body">
-                    <h4 class="modal-title">Morgan Freeman</h4>
+                    <h4 class="modal-title mt-5">Morgan Freeman</h4>
                     <div class="activity-info">
                         <div class="activity-details">
                             <p>
@@ -491,6 +490,81 @@
         </button>
     </div>
 
+    <div class="modal" id="sendMessage1" tabindex="-1" style="padding-right: 15px;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="inner">
+                        <img id="modalImage" loading="lazy" src="../Source/HankPym.jpg" class="avatar group-6-avatar avatar-200 photo" width="150" height="150">
+                    </div>
+                </div>
+                <div class="modal-body mt-5">
+                    <h4 class="modal-title" id="modalTitle">Hank Pym</h4>
+                    <div class="activity-info">
+                        <div class="activity-details">
+                            <p>
+                                <ax>Friends Since:</ax> Nov 12th, 2022</p>
+                            <p>
+                                <ax>Description:</ax> I like to build stuff and watch movies</p>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="input-group send-message">
+                        <input type="text" id="message4" class="form-control" placeholder="Send a message">
+                    </div>
+                    <p></p>
+                    <div class="submit">
+                        <button id ="messageButton4" type="submity" style="float: left;" data-bs-dismiss="modal">Send Message</button>
+                        <button type="submit-cancel" style="float: right;" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="icon ion-close-round"></i>
+        </button>
+    </div>
+
+    <div class="modal" id="sendMessage2" tabindex="-1" style="padding-right: 15px;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="inner">
+                        <img id="modalImage" loading="lazy" src="../Source/SteveRogers.jpg" class="avatar group-6-avatar avatar-200 photo" width="150" height="150">
+                    </div>
+                </div>
+                <div class="modal-body mt-5">
+                    <h4 class="modal-title" id="modalTitle">Steve Rogers</h4>
+                    <div class="activity-info">
+                        <div class="activity-details">
+                            <p>
+                                <ax>Friends Since:</ax> March 12th, 2022</p>
+                            <p>
+                                <ax>Description:</ax> I am a veteran and I like to read books
+                            </p>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="input-group send-message">
+                        <input type="text" id="message5" class="form-control" placeholder="Send a message">
+                    </div>
+                    <p></p>
+                    <div class="submit">
+                        <button id ="messageButton5" type="submity" style="float: left;" data-bs-dismiss="modal">Send Message</button>
+                        <button type="submit-cancel" style="float: right;" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="icon ion-close-round"></i>
+        </button>
+    </div>
+
     <div class="modal fade" id="successMessage" tabindex="-1" data-bs-backdrop="static">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -504,6 +578,18 @@
         </div>
     </div>
 
+    <div class="modal fade" id="successEmergency" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    Added to Emergency Contacts!
+                </div>
+                <div>
+                    <button type="button" class="btn btn-secondary" style="float: right;" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade" id="failureMessage" tabindex="-1" data-bs-backdrop="static">
         <div class="modal-dialog">
@@ -517,6 +603,21 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="failureEmergency" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    Removed from Emergency Contacts!
+                </div>
+                <div>
+                    <button type="button" class="btn btn-secondary" style="float: right;" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <script src="../JavaScript/common.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js " integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3 " crossorigin="anonymous "></script>

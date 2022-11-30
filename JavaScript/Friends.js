@@ -140,3 +140,76 @@ function textValidation3() {
         document.getElementById('message3').value=""
     }
 }
+
+var sendMessageButton4 = document.getElementById("messageButton4")
+sendMessageButton4.addEventListener("click", textValidation4);
+
+function textValidation4() {
+    let checkText4 = document.getElementById('message4').value;
+    if ((checkText4==='')){
+        $('#failureMessage').modal('show')
+        $('#sendMessage1').modal('show');
+    }
+    else{
+        $('#sendMessage1').modal('hide');
+        $('#successMessage').modal('show')
+        document.getElementById('message4').value=""
+    }
+}
+
+
+var sendMessageButton5 = document.getElementById("messageButton5")
+sendMessageButton5.addEventListener("click", textValidation5);
+
+function textValidation5() {
+    let checkText5 = document.getElementById('message5').value;
+    if ((checkText5==='')){
+        $('#failureMessage').modal('show')
+        $('#sendMessage2').modal('show');
+    }
+    else{
+        $('#sendMessage').modal('hide');
+        $('#successMessage').modal('show')
+        document.getElementById('message5').value=""
+    }
+}
+
+const Emergency1 = document.getElementById("Emergency1")
+Emergency1.addEventListener("click",emergencyModal1);
+
+function emergencyModal1(){
+    const initialText = 'Add to Emergency Contacts';
+
+    if (Emergency1.textContent.toLowerCase().includes(initialText.toLowerCase())) {
+        
+      Emergency1.textContent = 'Remove from Emergency Contacts';
+      $('#successEmergency').modal('show')
+      Emergency1.classList.remove("btn-success")
+      Emergency1.classList.add("btn-danger")
+    } else {
+        Emergency1.classList.remove("btn-danger")
+        Emergency1.classList.add("btn-success")
+      Emergency1.textContent = initialText;
+      $('#failureEmergency').modal('show')
+    }
+}
+
+const Emergency2 = document.getElementById("Emergency2")
+Emergency2.addEventListener("click",emergencyModal2);
+
+function emergencyModal2(){
+    const initialText = 'Add to Emergency Contacts';
+
+    if (Emergency2.textContent.toLowerCase().includes(initialText.toLowerCase())) {
+        
+      Emergency2.textContent = 'Remove from Emergency Contacts';
+      $('#successEmergency').modal('show')
+      Emergency2.classList.remove("btn-success")
+      Emergency2.classList.add("btn-danger")
+    } else {
+        Emergency2.classList.remove("btn-danger")
+        Emergency2.classList.add("btn-success")
+      Emergency2.textContent = initialText;
+      $('#failureEmergency').modal('show')
+    }
+}
