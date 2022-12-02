@@ -108,19 +108,21 @@
                         </div>
                         <div class="col-sm-6"> </div>
                         <div class="input-group col ">
-                            <select class="form-control" id="groups-order-by" data-bp-filter="groups">
-                            <option value="active">Last Active</option>
-                            <option value="popular">Nearest</option>
-                            <option value="alphabetical">Alphabetical</option>
+                            <select class="form-control" id="sorting_options" id="groups-order-by" data-bp-filter="groups" onchange="selectOptions()">
+                                
+                                <option value="popular">Nearest</option>
+                                <option value="active" id="last_active">Last Active</option>
+                            
+                                <option value="alphabetical" id='alpha'>Alphabetical</option>
                         </select>
                         </div>
                     </div>
 
                     <p></p>
                     <div id="groups-dir-list" class="row reconnect-wrap">
-
+                        <!-- 'Giving ids to individual placards to sort as per the different textures. So id='A' and so should not be removed.' --> 
                         <ul id="groups-list" class="row item-list groups-list bp-list list-unstyled grid three">
-                            <li class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
+                            <li id='A' class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-avatar">
                                         <img id="image1" loading="lazy" src="../Source/Profile1.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="">
@@ -129,7 +131,7 @@
                                         <div class="item-block">
                                             <h5 class="list-title groups-title" id="name1">Susan Brown</h5>
                                             <p class="last-activity item-meta mute">
-                                                Active <span>10 hours ago</span> </p>
+                                                Active <span id="time">14 hours ago</span> </p>
                                             <p class="item-meta group-details">10 Friends / 6 Groups</p>
                                             <p>
                                                 <div class="progress">
@@ -147,7 +149,7 @@
                             </li>
 
 
-                            <li class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
+                            <li id = 'B'class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-avatar">
                                         <img id="image2" loading="lazy" src="../Source/Profile2.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="">
@@ -156,7 +158,7 @@
                                         <div class="item-block">
                                             <h5 class="list-title groups-title" id="name2">Derek O'Brian</h5>
                                             <p class="last-activity item-meta mute">
-                                                Active <span>10 mins ago</span> </p>
+                                                Active <span id="time">10 mins ago</span> </p>
                                             <p class="item-meta group-details">20 Friends / 2 Groups</p>
                                             <p>
                                                 <div class="progress">
@@ -173,7 +175,7 @@
                                 </div>
                             </li>
 
-                            <li class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
+                            <li id = 'C' class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-avatar">
                                         <img id="image3" loading="lazy" src="../Source/Profile3.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="">
@@ -182,7 +184,7 @@
                                         <div class="item-block">
                                             <h5 class="list-title groups-title" id="name3">Maria Bloom</h5>
                                             <p class="last-activity item-meta mute">
-                                                Active <span>10 hours ago</span> </p>
+                                                Active <span id="time">1 day ago</span> </p>
                                             <p class="item-meta group-details">12 Friends / 3 Groups</p>
                                             <p>
                                                 <div class="progress">
@@ -202,7 +204,7 @@
                         </ul>
 
                         <ul id="groups-list2" class="row item-list groups-list bp-list list-unstyled grid three">
-                            <li class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
+                            <li id = 'D' class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-avatar">
                                         <img id="image4" loading="lazy" src="../Source/Profile4.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="">
@@ -211,7 +213,7 @@
                                         <div class="item-block">
                                             <h5 class="list-title groups-title" id="name4">Jeffery Mayer</h5>
                                             <p class="last-activity item-meta mute">
-                                                Active <span>10 hours ago</span> </p>
+                                                Active <span id="time">12 hours ago</span> </p>
                                             <p class="item-meta group-details">1 Friend / 1 Group</p>
                                             <p>
                                                 <div class="progress">
@@ -229,7 +231,7 @@
                             </li>
 
 
-                            <li class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
+                            <li id = 'E' class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-avatar">
                                         <img id="image5" loading="lazy" src="../Source/Profile5.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="Profile picture of Khabib Nurmagomedov">
@@ -238,7 +240,7 @@
                                         <div class="item-block">
                                             <h5 class="list-title groups-title" id="name5">Mary Sainz</h5>
                                             <p class="last-activity item-meta mute">
-                                                Active <span>10 mins ago</span> </p>
+                                                Active <span id="time">17 mins ago</span> </p>
                                             <p class="item-meta group-details">22 Friends / 8 Groups</p>
                                             <p>
                                                 <div class="progress">
@@ -255,7 +257,7 @@
                                 </div>
                             </li>
 
-                            <li class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
+                            <li id = 'F' class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-avatar">
                                         <img id="image6" loading="lazy" src="../Source/Profile6.jpg" class="avatar user-3-avatar avatar-200 photo" width="100" height="100" alt="">
@@ -264,7 +266,7 @@
                                         <div class="item-block">
                                             <h5 class="list-title groups-title" id="name6">Lewis Green</h5>
                                             <p class="last-activity item-meta mute">
-                                                Active <span>10 hours ago</span> </p>
+                                                Active <span id="time">3 hours ago</span> </p>
                                             <p class="item-meta group-details">15 Friends / 5 Groups</p>
                                             <p>
                                                 <div class="progress">
