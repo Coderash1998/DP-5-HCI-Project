@@ -68,7 +68,6 @@
                             </svg> Hello, <span id="person_name">John Doe</span>
                     </a>
                     <!-- <ul class="dropdown-menu">
-
                             <li><a class="dropdown-item" href="ProfileView.html"><svg
                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
@@ -99,12 +98,7 @@
 
                     <div class="row">
                         <div class="input-group w-25 col">
-                            <input type="text" class="form-control" placeholder="Search People..." aria-label="Search People" aria-describedby="search_people">
-                            <button class="input-group-text" id="search_groups">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                            </svg>
-                        </button>
+                            <input type="text" class="form-control" id="search_box" placeholder="Search People..." aria-label="Search People" aria-describedby="search_people" onkeyup="search()">
                         </div>
                         <div class="col-sm-6"> </div>
                         <div class="input-group col ">
@@ -120,7 +114,6 @@
 
                     <p></p>
                     <div id="groups-dir-list" class="row reconnect-wrap">
-                        <!-- 'Giving ids to individual placards to sort as per the different textures. So id='A' and so should not be removed.' --> 
                         <ul id="groups-list" class="row item-list groups-list bp-list list-unstyled grid three">
                             <li id='A' class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
@@ -138,9 +131,9 @@
                                                     <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85% Match</div>
                                                 </div>
                                             </p>
-                                            <ul class="action">
-                                                <li id="button1" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></li>
-                                            </ul>
+                                         
+                                                <button id="button1" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></button>
+    
                                         </div>
 
                                     </div>
@@ -165,9 +158,9 @@
                                                     <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85% Match</div>
                                                 </div>
                                             </p>
-                                            <ul class="action">
-                                                <li id="button2" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></li>
-                                            </ul>
+                                           
+                                                <button id="button2" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></button>
+                                        
                                         </div>
 
                                     </div>
@@ -191,19 +184,18 @@
                                                     <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85% Match</div>
                                                 </div>
                                             </p>
-                                            <ul class="action">
-                                                <li id="button3" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></li>
-                                            </ul>
+                                            
+                                                <button id="button3" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></button>
+                                         
                                         </div>
-
+                                        
                                     </div>
 
                                 </div>
                             </li>
+                        <!-- </ul> -->
 
-                        </ul>
-
-                        <ul id="groups-list2" class="row item-list groups-list bp-list list-unstyled grid three">
+                        <!-- <ul id="groups-list2" class="row item-list groups-list bp-list list-unstyled grid three"> -->
                             <li id = 'D' class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-avatar">
@@ -220,9 +212,9 @@
                                                     <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85% Match</div>
                                                 </div>
                                             </p>
-                                            <ul class="action">
-                                                <li id="button4" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></li>
-                                            </ul>
+                                        
+                                                <button id="button4" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></button>
+                                      
                                         </div>
 
                                     </div>
@@ -247,9 +239,9 @@
                                                     <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85% Match</div>
                                                 </div>
                                             </p>
-                                            <ul class="action">
-                                                <li id="button5" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></li>
-                                            </ul>
+                                        
+                                                <button id="button5" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></button>
+                                    
                                         </div>
 
                                     </div>
@@ -273,9 +265,9 @@
                                                     <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85% Match</div>
                                                 </div>
                                             </p>
-                                            <ul class="action">
-                                                <li id="button6" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></li>
-                                            </ul>
+                                       
+                                                <button id="button6" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewProfile" onclick="getId(this.id)"><a>View Profile</a></button>
+                                    
                                         </div>
 
                                     </div>

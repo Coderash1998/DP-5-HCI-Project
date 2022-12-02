@@ -99,19 +99,14 @@
 
                     <div class="row">
                         <div class="input-group w-25 col">
-                            <input type="text" class="form-control" placeholder="Search Groups..." aria-label="Search Groups" aria-describedby="search_groups">
-                            <button class="input-group-text" id="search_groups">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                                </svg>
-                            </button>
+                            <input type="text" class="form-control" id="search_box" placeholder="Search Groups..." aria-label="Search Groups" aria-describedby="search_groups" onkeyup="search()">
                         </div>
                         <div class="col-sm-6"> </div>
                         <div class="input-group col ">
-                            <select class="form-control" id="groups-order-by" data-bp-filter="groups">
+                            <select class="form-control" id="groups-order-by" id="sorting_options" data-bp-filter="groups" onchange="selectOptions()">
+                                <option value="newest">Newly Created</option>
                                 <option value="active">Last Active</option>
                                 <option value="popular">Most Members</option>
-                                <option value="newest">Newly Created</option>
                                 <option value="alphabetical">Alphabetical</option>
                             </select>
                         </div>
@@ -121,7 +116,7 @@
                     <div id="groups-dir-list" class="row reconnect-wrap">
 
                         <ul id="groups-list" class="row item-list groups-list bp-list list-unstyled grid three">
-                            <li class="item-entry group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
+                            <li id="A" class="item-entry group-has-avatar list-unstyled main-item" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-cover" style="background-image: url('../Source/Reading2.jpg')"></div>
                                     <div class="item-avatar">
@@ -149,9 +144,9 @@
                                                     <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85% Match</div>
                                                 </div>
                                             </p>
-                                            <ul class="action">
-                                                <li id="button1" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></li>
-                                            </ul>
+                                            
+                                                <button id="button1" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></button>
+                                            
                                         </div>
 
                                     </div>
@@ -160,7 +155,7 @@
                             </li>
 
 
-                            <li class="item-entry animate-item odd public group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
+                            <li id="B" class="item-entry animate-item odd public group-has-avatar list-unstyled main-item" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-cover" style="background-image: url('../Source/Gardening2.jpg')"></div>
                                     <div class="item-avatar">
@@ -190,9 +185,9 @@
                                                 </div>
                                             </p>
 
-                                            <ul class="action">
-                                                <li id="button2" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></li>
-                                            </ul>
+                                            
+                                                <button id="button2" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></button>
+                                            
                                         </div>
 
                                     </div>
@@ -200,7 +195,7 @@
                                 </div>
                             </li>
 
-                            <li class="item-entry animate-item odd public group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
+                            <li id="C" class="item-entry animate-item odd public group-has-avatar list-unstyled main-item" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
 
                                     <div class="item-cover" style="background-image: url('../Source/Photography2.jpg')"></div>
@@ -241,9 +236,9 @@
 
 
 
-                                            <ul class="action">
-                                                <li id="button3" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></li>
-                                            </ul>
+                                            
+                                                <button id="button3" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></button>
+                                            
                                         </div>
 
                                     </div>
@@ -252,11 +247,11 @@
                             </li>
 
 
-                        </ul>
+                        <!-- </ul>
 
-                        <ul id="groups-list2" class="row item-list groups-list bp-list list-unstyled grid three">
+                        <ul id="groups-list2" class="row item-list groups-list bp-list list-unstyled grid three"> -->
 
-                            <li class="item-entry animate-item odd public group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
+                            <li id="D" class="item-entry animate-item odd public group-has-avatar list-unstyled main-item" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
                                     <div class="item-cover" style="background-image: url('../Source/Cooking2.jpg')"></div>
                                     <div class="item-avatar">
@@ -297,9 +292,9 @@
                                             </p>
 
 
-                                            <ul class="action">
-                                                <li id="button4" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></li>
-                                            </ul>
+                                            
+                                                <button id="button4" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></button>
+                                            
                                         </div>
 
                                     </div>
@@ -308,7 +303,7 @@
                             </li>
 
 
-                            <li class="item-entry animate-item odd public group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
+                            <li id="E" class="item-entry animate-item odd public group-has-avatar list-unstyled main-item" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
 
                                     <div class="item-cover" style="background-image: url('../Source/Travelling2.jpg')"></div>
@@ -341,9 +336,9 @@
                                                 </div>
                                             </p>
 
-                                            <ul class="action">
-                                                <li id="button5" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></li>
-                                            </ul>
+                                            
+                                                <button id="button5" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></button>
+                                            
                                         </div>
 
                                     </div>
@@ -351,7 +346,7 @@
                                 </div>
                             </li>
 
-                            <li class="item-entry animate-item odd public group-has-avatar list-unstyled" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
+                            <li id="F" class="item-entry animate-item odd public group-has-avatar list-unstyled main-item" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
 
                                     <div class="item-cover" style="background-image: url('../Source/Painting2.jpg')"></div>
@@ -395,9 +390,9 @@
 
 
 
-                                            <ul class="action">
-                                                <li id="button6" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></li>
-                                            </ul>
+                                        
+                                                <button id="button6" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></button>
+                                            
                                         </div>
 
                                     </div>

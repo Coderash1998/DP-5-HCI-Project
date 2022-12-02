@@ -25,21 +25,22 @@ function getId(id){
 }
 
 function sortTime(){
+    let a=document.getElementById("A")
+    let b=document.getElementById("B")
+    let c=document.getElementById("C")
+    let d=document.getElementById("D")
+    let e=document.getElementById("E")
+    let f=document.getElementById("F")
+
+    let arr=[b,e,f,d,a,c];
     var ul=document.getElementById("groups-list")
-    var list=ul.getElementsByTagName("LI");
-    for(let i=0;i<list.length;i++)
-        console.log(list[0]);
+    arr.forEach(item=>ul.appendChild(item))
 }
 
 function sortName(){
-    console.log('sortNames')
     var ul=document.getElementById("groups-list")
     Array.from(ul.getElementsByTagName("LI")).sort((a,b)=>a.textContent.localeCompare(b.textContent))
     .forEach(li=>ul.appendChild(li))
-
-    var ul2=document.getElementById("groups-list2")
-    Array.from(ul2.getElementsByTagName("LI")).sort((a,b)=>a.textContent.localeCompare(b.textContent))
-    .forEach(li=>ul2.appendChild(li))
 }
 
 function selectOptions(){
@@ -48,4 +49,25 @@ function selectOptions(){
         sortName();
     if(item==="active")
         sortTime();
+}
+
+function search(){
+   let search_text=document.getElementById("search_box").value.toUpperCase();
+   let people_list=document.getElementById("groups-list")
+   let people=people_list.getElementsByTagName("li")
+   let person_name=people_list.getElementsByTagName("h5")
+    
+   for(let i=0;i<person_name.length;i++){
+    console.log(people[i]);
+    let match=people[i].getElementsByTagName('h5')[0]
+    if(match){
+        let textValue=match.textContent || match.innerHTML
+        if(textValue.toUpperCase().indexOf(search_text)>-1){
+            people[i].style.display=""
+        }
+        else{
+            people[i].style.display="none"
+        }
+    }
+   }
 }
