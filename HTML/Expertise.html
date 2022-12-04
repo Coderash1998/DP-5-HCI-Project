@@ -30,14 +30,14 @@
         <div class="justify-center">
             <div class="col-sm-8 offset-2">
                 <div class="heading">
-                    <h1 class="title h2 text-center">Choose Expertise</h1>
+                    <h1 class="title h2 text-center">Set Expertise Level</h1>
                 </div>
                 <form class="hobby_filters">
 
                     <div class="row">
 
                         <div class="input-group w-25 col">
-                            <input type="text" class="form-control" placeholder="Keyword" aria-label="Keyword" aria-describedby="keyword_search">
+                            <input type="text" class="form-control" placeholder="Search" aria-label="Keyword" aria-describedby="keyword_search">
                             <button class="input-group-text" id="keyword_search">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
@@ -48,7 +48,7 @@
                         <div class="col-sm-6"> </div>
 
                         <div class="input-group w-25 col">
-                            <input type="number" min="1" max="50" class="form-control" placeholder="Distance" aria-label="Distance" aria-describedby="distance_miles">
+                            <input type="number" min="1" max="50" class="form-control" placeholder="Distance (in miles)" aria-label="Distance" aria-describedby="distance_miles">
                             <button class="input-group-text" id="distance_miles">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM2.906 5.189l.956-1.913A.5.5 0 0 1 4.309 3h7.382a.5.5 0 0 1 .447.276l.956 1.913a.51.51 0 0 1-.497.731c-.91-.073-3.35-.17-4.597-.17-1.247 0-3.688.097-4.597.17a.51.51 0 0 1-.497-.731Z"/>
@@ -61,8 +61,8 @@
 
                 <!-- List of hobbies selected -->
                 <p></p>
-                <ul class="list-unstyled">
-                    <li id="list1" class="hobby_list" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
+                <ul class="hobby_list list-unstyled">
+                    <li id="list1" class="hobby_list ondemand" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
                         <div class="hobby-list-item">
                             <div class="logo">
                                 <figure>
@@ -75,22 +75,22 @@
                                 </h4>
                                 <div class="about-hobby">
                                     <span id="hobby_desc1" class="description mute ellipsis">Chess is an abstract strategy game and involves no hidden information. It is played on a chessboard with 64 squares arranged in an eight-by-eight grid.</span>
-                                    <span class="hobby-name color-primary ellipsis">Experience: 2-5 yrs</span>
-                                    <span class="hobby-name color-primary ellipsis">Style: Bullet</span>
-                                    <span class="hobby-name color-primary ellipsis">Audience: 0 people</span>
+                                    <span class="hobby-name color-primary ellipsis">Experience: <span id="exp1" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Style: <span id="style1" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Audience: <span id="audience1" style="color: black">-</span></span>
                                 </div>
                             </div>
                             <div class="hobby-listing-meta">
                                 <ul class="hobby-types-lists ellipsis list-unstyled">
                                     <li class="hobby-type list-unstyled" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
-                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal1">Set Level</button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </li>
 
-                    <li id="list2" class="hobby_list" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
+                    <li id="list2" class="hobby_list ondemand" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
                         <div class="hobby-list-item">
                             <div class="logo">
                                 <figure>
@@ -103,22 +103,22 @@
                                 </h4>
                                 <div class="about-hobby">
                                     <span id="hobby_desc2" class="description mute ellipsis">Fishing is the activity of trying to catch fish.</span>
-                                    <span class="hobby-name color-primary ellipsis">Experience: 1 yr</span>
-                                    <span class="hobby-name color-primary ellipsis">Style: Rod Fishing</span>
-                                    <span class="hobby-name color-primary ellipsis">Audience: 5 people</span>
+                                    <span class="hobby-name color-primary ellipsis">Experience: <span id="exp2" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Style: <span id="style2" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Audience: <span id="audience2" style="color: black">-</span></span>
                                 </div>
                             </div>
                             <div class="hobby-listing-meta">
                                 <ul class="hobby-types-lists ellipsis list-unstyled">
                                     <li class="hobby-type list-unstyled">
-                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal2">Set Level</button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </li>
 
-                    <li id="list3" class="hobby_list" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
+                    <li id="list3" class="hobby_list ondemand" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
                         <div class="hobby-list-item">
                             <div class="logo">
                                 <figure>
@@ -131,22 +131,22 @@
                                 </h4>
                                 <div class="about-hobby">
                                     <span id="hobby_desc3" class="description mute ellipsis">Gardening is about finding the right combination of sunlight, fertile soil, and water to make your plants thrive.</span>
-                                    <span class="hobby-name color-primary ellipsis">Experience: 10+ yrs</span>
-                                    <span class="hobby-name color-primary ellipsis">Style: Organic</span>
-                                    <span class="hobby-name color-primary ellipsis">Audience: 0 people</span>
+                                    <span class="hobby-name color-primary ellipsis">Experience: <span id="exp3" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Style: <span id="style3" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Audience: <span id="audience3" style="color: black">-</span></span>
                                 </div>
                             </div>
                             <div class="hobby-listing-meta">
                                 <ul class="hobby-types-lists ellipsis list-unstyled">
                                     <li class="hobby-type list-unstyled">
-                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal3">Set Level</button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </li>
 
-                    <li id="list4" class="hobby_list" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
+                    <li id="list4" class="hobby_list ondemand" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
                         <div class="hobby-list-item">
                             <div class="logo">
                                 <figure>
@@ -159,22 +159,22 @@
                                 </h4>
                                 <div class="about-hobby">
                                     <span id="hobby_desc4" class="description mute ellipsis">Gardening is about finding the right combination of sunlight, fertile soil, and water to make your plants thrive.</span>
-                                    <span class="hobby-name color-primary ellipsis">Experience: 10+ yrs</span>
-                                    <span class="hobby-name color-primary ellipsis">Style: Organic</span>
-                                    <span class="hobby-name color-primary ellipsis">Audience: 0 people</span>
+                                    <span class="hobby-name color-primary ellipsis">Experience: <span id="exp4" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Style: <span id="style4" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Audience: <span id="audience4" style="color: black">-</span></span>
                                 </div>
                             </div>
                             <div class="hobby-listing-meta">
                                 <ul class="hobby-types-lists ellipsis list-unstyled">
                                     <li class="hobby-type list-unstyled">
-                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal4">Set Level</button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </li>
 
-                    <li id="list5" class="hobby_list" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
+                    <li id="list5" class="hobby_list ondemand" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
                         <div class="hobby-list-item">
                             <div class="logo">
                                 <figure>
@@ -187,22 +187,22 @@
                                 </h4>
                                 <div class="about-hobby">
                                     <span id="hobby_desc5" class="description mute ellipsis">Gardening is about finding the right combination of sunlight, fertile soil, and water to make your plants thrive.</span>
-                                    <span class="hobby-name color-primary ellipsis">Experience: 10+ yrs</span>
-                                    <span class="hobby-name color-primary ellipsis">Style: Organic</span>
-                                    <span class="hobby-name color-primary ellipsis">Audience: 0 people</span>
+                                    <span class="hobby-name color-primary ellipsis">Experience: <span id="exp5" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Style: <span id="style5" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Audience: <span id="audience5" style="color: black">-</span></span>
                                 </div>
                             </div>
                             <div class="hobby-listing-meta">
                                 <ul class="hobby-types-lists ellipsis list-unstyled">
                                     <li class="hobby-type list-unstyled">
-                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal5">Set Level</button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </li>
 
-                    <li id="list6" class="hobby_list" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
+                    <li id="list6" class="hobby_list ondemand" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
                         <div class="hobby-list-item">
                             <div class="logo">
                                 <figure>
@@ -215,22 +215,22 @@
                                 </h4>
                                 <div class="about-hobby">
                                     <span id="hobby_desc6" class="description mute ellipsis">Gardening is about finding the right combination of sunlight, fertile soil, and water to make your plants thrive.</span>
-                                    <span class="hobby-name color-primary ellipsis">Experience: 10+ yrs</span>
-                                    <span class="hobby-name color-primary ellipsis">Style: Organic</span>
-                                    <span class="hobby-name color-primary ellipsis">Audience: 0 people</span>
+                                    <span class="hobby-name color-primary ellipsis">Experience: <span id="exp6" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Style: <span id="style6" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Audience: <span id="audience6" style="color: black">-</span></span>
                                 </div>
                             </div>
                             <div class="hobby-listing-meta">
                                 <ul class="hobby-types-lists ellipsis list-unstyled">
                                     <li class="hobby-type list-unstyled">
-                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal6">Set Level</button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </li>
 
-                    <li id="list7" class="hobby_list" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
+                    <li id="list7" class="hobby_list ondemand" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
                         <div class="hobby-list-item">
                             <div class="logo">
                                 <figure>
@@ -243,22 +243,22 @@
                                 </h4>
                                 <div class="about-hobby">
                                     <span id="hobby_desc7" class="description mute ellipsis">Gardening is about finding the right combination of sunlight, fertile soil, and water to make your plants thrive.</span>
-                                    <span class="hobby-name color-primary ellipsis">Experience: 10+ yrs</span>
-                                    <span class="hobby-name color-primary ellipsis">Style: Organic</span>
-                                    <span class="hobby-name color-primary ellipsis">Audience: 0 people</span>
+                                    <span class="hobby-name color-primary ellipsis">Experience: <span id="exp7" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Style: <span id="style7" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Audience: <span id="audience7" style="color: black">-</span></span>
                                 </div>
                             </div>
                             <div class="hobby-listing-meta">
                                 <ul class="hobby-types-lists ellipsis list-unstyled">
                                     <li class="hobby-type list-unstyled">
-                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal7">Set Level</button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </li>
 
-                    <li id="list8" class="hobby_list" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
+                    <li id="list8" class="hobby_list ondemand" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
                         <div class="hobby-list-item">
                             <div class="logo">
                                 <figure>
@@ -271,22 +271,22 @@
                                 </h4>
                                 <div class="about-hobby">
                                     <span id="hobby_desc8" class="description mute ellipsis">Gardening is about finding the right combination of sunlight, fertile soil, and water to make your plants thrive.</span>
-                                    <span class="hobby-name color-primary ellipsis">Experience: 10+ yrs</span>
-                                    <span class="hobby-name color-primary ellipsis">Style: Organic</span>
-                                    <span class="hobby-name color-primary ellipsis">Audience: 0 people</span>
+                                    <span class="hobby-name color-primary ellipsis">Experience: <span id="exp8" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Style: <span id="style8" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Audience: <span id="audience8" style="color: black">-</span></span>
                                 </div>
                             </div>
                             <div class="hobby-listing-meta">
                                 <ul class="hobby-types-lists ellipsis list-unstyled">
                                     <li class="hobby-type list-unstyled">
-                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal8">Set Level</button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </li>
 
-                    <li id="list9" class="hobby_list" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
+                    <li id="list9" class="hobby_list ondemand" data-longitude="" data-latitude="" style="visibility: visible; animation-name: slideInUp;">
                         <div class="hobby-list-item">
                             <div class="logo">
                                 <figure>
@@ -299,15 +299,15 @@
                                 </h4>
                                 <div class="about-hobby">
                                     <span id="hobby_desc9" class="description mute ellipsis">Gardening is about finding the right combination of sunlight, fertile soil, and water to make your plants thrive.</span>
-                                    <span class="hobby-name color-primary ellipsis">Experience: 10+ yrs</span>
-                                    <span class="hobby-name color-primary ellipsis">Style: Organic</span>
-                                    <span class="hobby-name color-primary ellipsis">Audience: 0 people</span>
+                                    <span class="hobby-name color-primary ellipsis">Experience: <span id="exp9" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Style: <span id="style9" style="color: black">-</span></span>
+                                    <span class="hobby-name color-primary ellipsis">Audience: <span id="audience9" style="color: black">-</span></span>
                                 </div>
                             </div>
                             <div class="hobby-listing-meta">
                                 <ul class="hobby-types-lists ellipsis list-unstyled">
                                     <li class="hobby-type list-unstyled">
-                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal9">Set Level</button>
                                     </li>
                                 </ul>
                             </div>
@@ -317,45 +317,366 @@
                 <a href="Hobbies.html" class="btn btn-danger" role="button">Previous</a>
                 <a href="Profile.html" class="btn btn-success" role="button" style="float: right;">Next</a>
 
-                <!-- Modal Singing -->
-                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                <!-- Modal 1-->
+                <div class="modal fade" id="editModal1" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="editModalLabel">Details of Activity</h1>
+                                <h1 class="modal-title fs-5" id="editModalLabel1">Details of Activity</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <form>
                                     <div class="mb-3">
                                         <label class="form-label">Experience</label>
-                                        <div id="exprHelp" class="form-text">How long have you been doing this activity?</div>
-                                        <select class="form-control" id="groups-order-by" data-bp-filter="groups">
-                                            <option value="active">1 yr</option>
-                                            <option value="popular">2-5 yrs</option>
-                                            <option value="newest">5-10 yrs</option>
-                                            <option value="alphabetical">10+ yrs</option>
+                                        <div id="exprHelp1" class="form-text">How long have you been doing this activity?</div>
+                                        <select class="form-control" id="groups-order-by1" data-bp-filter="groups">
+                                            <option value="0-1 yr">0-1 yr</option>
+                                            <option value="2-5 yrs">2-5 yrs</option>
+                                            <option value="5-10 yrs">5-10 yrs</option>
+                                            <option value="10+ yrs">10+ yrs</option>
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="editInputStyle" class="form-label">Style</label>
-                                        <div id="styleHelp" class="form-text">What styles are you interested in?</div>
-                                        <input type="text" class="form-control" id="editInputStyle" aria-describedby="styleHelp">
+                                        <label for="editInputStyle2" class="form-label">Style</label>
+                                        <div id="styleHelp1" class="form-text">What styles are you interested in?</div>
+                                        <input type="text" class="form-control" id="editInputStyle1" aria-describedby="styleHelp">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="editInputAudi" class="form-label">Audience</label>
-                                        <div id="audienceHelp" class="form-text">How many people have you taught?</div>
-                                        <input type="text" class="form-control" id="editInputAudi" aria-describedby="audienceHelp">
+                                        <label for="editInputAudi2" class="form-label">Audience</label>
+                                        <div id="audienceHelp1" class="form-text">How many people have you taught?</div>
+                                        <input type="number" min="0" class="form-control" id="editInputAudi1" aria-describedby="audienceHelp">
                                     </div>
                                 </form>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onclick="SaveLevel1()">Save changes</button>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal 2 -->
+                <div class="modal fade" id="editModal2" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="editModalLabel2">Details of Activity</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Experience</label>
+                                        <div id="exprHelp2" class="form-text">How long have you been doing this activity?</div>
+                                        <select class="form-control" id="groups-order-by2" data-bp-filter="groups">
+                                            <option value="0-1 yr">0-1 yr</option>
+                                            <option value="2-5 yrs">2-5 yrs</option>
+                                            <option value="5-10 yrs">5-10 yrs</option>
+                                            <option value="10+ yrs">10+ yrs</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputStyle1" class="form-label">Style</label>
+                                        <div id="styleHelp2" class="form-text">What styles are you interested in?</div>
+                                        <input type="text" class="form-control" id="editInputStyle2" aria-describedby="styleHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputAudi1" class="form-label">Audience</label>
+                                        <div id="audienceHelp2" class="form-text">How many people have you taught?</div>
+                                        <input type="number" min="0" class="form-control" id="editInputAudi2" aria-describedby="audienceHelp">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onclick="SaveLevel2()">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 3 -->
+                <div class="modal fade" id="editModal3" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="editModalLabel3">Details of Activity</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Experience</label>
+                                        <div id="exprHelp3" class="form-text">How long have you been doing this activity?</div>
+                                        <select class="form-control" id="groups-order-by3" data-bp-filter="groups">
+                                            <option value="0-1 yr">0-1 yr</option>
+                                            <option value="2-5 yrs">2-5 yrs</option>
+                                            <option value="5-10 yrs">5-10 yrs</option>
+                                            <option value="10+ yrs">10+ yrs</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputStyle3" class="form-label">Style</label>
+                                        <div id="styleHelp3" class="form-text">What styles are you interested in?</div>
+                                        <input type="text" class="form-control" id="editInputStyle3" aria-describedby="styleHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputAudi3" class="form-label">Audience</label>
+                                        <div id="audienceHelp3" class="form-text">How many people have you taught?</div>
+                                        <input type="number" min="0" class="form-control" id="editInputAudi3" aria-describedby="audienceHelp">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onclick="SaveLevel3()">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 4 -->
+                <div class="modal fade" id="editModal4" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="editModalLabel4">Details of Activity</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Experience</label>
+                                        <div id="exprHelp4" class="form-text">How long have you been doing this activity?</div>
+                                        <select class="form-control" id="groups-order-by4" data-bp-filter="groups">
+                                            <option value="0-1 yr">0-1 yr</option>
+                                            <option value="2-5 yrs">2-5 yrs</option>
+                                            <option value="5-10 yrs">5-10 yrs</option>
+                                            <option value="10+ yrs">10+ yrs</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputStyle4" class="form-label">Style</label>
+                                        <div id="styleHelp4" class="form-text">What styles are you interested in?</div>
+                                        <input type="text" class="form-control" id="editInputStyle4" aria-describedby="styleHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputAudi4" class="form-label">Audience</label>
+                                        <div id="audienceHelp4" class="form-text">How many people have you taught?</div>
+                                        <input type="number" min="0" class="form-control" id="editInputAudi4" aria-describedby="audienceHelp">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onclick="SaveLevel4()">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 5 -->
+                <div class="modal fade" id="editModal5" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="editModalLabel5">Details of Activity</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Experience</label>
+                                        <div id="exprHelp5" class="form-text">How long have you been doing this activity?</div>
+                                        <select class="form-control" id="groups-order-by5" data-bp-filter="groups">
+                                            <option value="0-1 yr">0-1 yr</option>
+                                            <option value="2-5 yrs">2-5 yrs</option>
+                                            <option value="5-10 yrs">5-10 yrs</option>
+                                            <option value="10+ yrs">10+ yrs</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputStyle5" class="form-label">Style</label>
+                                        <div id="styleHelp5" class="form-text">What styles are you interested in?</div>
+                                        <input type="text" class="form-control" id="editInputStyle5" aria-describedby="styleHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputAudi5" class="form-label">Audience</label>
+                                        <div id="audienceHelp5" class="form-text">How many people have you taught?</div>
+                                        <input type="number" min="0" class="form-control" id="editInputAudi5" aria-describedby="audienceHelp">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onclick="SaveLevel5()">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 6 -->
+                <div class="modal fade" id="editModal6" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="editModalLabel6">Details of Activity</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Experience</label>
+                                        <div id="exprHelp6" class="form-text">How long have you been doing this activity?</div>
+                                        <select class="form-control" id="groups-order-by6" data-bp-filter="groups">
+                                            <option value="0-1 yr">0-1 yr</option>
+                                            <option value="2-5 yrs">2-5 yrs</option>
+                                            <option value="5-10 yrs">5-10 yrs</option>
+                                            <option value="10+ yrs">10+ yrs</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputStyle6" class="form-label">Style</label>
+                                        <div id="styleHelp6" class="form-text">What styles are you interested in?</div>
+                                        <input type="text" class="form-control" id="editInputStyle6" aria-describedby="styleHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputAudi6" class="form-label">Audience</label>
+                                        <div id="audienceHelp6" class="form-text">How many people have you taught?</div>
+                                        <input type="number" min="0" class="form-control" id="editInputAudi6" aria-describedby="audienceHelp">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onclick="SaveLevel6()">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 7 -->
+                <div class="modal fade" id="editModal7" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="editModalLabel7">Details of Activity</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Experience</label>
+                                        <div id="exprHelp7" class="form-text">How long have you been doing this activity?</div>
+                                        <select class="form-control" id="groups-order-by7" data-bp-filter="groups">
+                                            <option value="0-1 yr">0-1 yr</option>
+                                            <option value="2-5 yrs">2-5 yrs</option>
+                                            <option value="5-10 yrs">5-10 yrs</option>
+                                            <option value="10+ yrs">10+ yrs</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputStyle7" class="form-label">Style</label>
+                                        <div id="styleHelp7" class="form-text">What styles are you interested in?</div>
+                                        <input type="text" class="form-control" id="editInputStyle7" aria-describedby="styleHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputAudi7" class="form-label">Audience</label>
+                                        <div id="audienceHelp7" class="form-text">How many people have you taught?</div>
+                                        <input type="number" min="0" class="form-control" id="editInputAudi7" aria-describedby="audienceHelp">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onclick="SaveLevel7()">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 8 -->
+                <div class="modal fade" id="editModal8" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="editModalLabel8">Details of Activity</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Experience</label>
+                                        <div id="exprHelp8" class="form-text">How long have you been doing this activity?</div>
+                                        <select class="form-control" id="groups-order-by8" data-bp-filter="groups">
+                                            <option value="0-1 yr">0-1 yr</option>
+                                            <option value="2-5 yrs">2-5 yrs</option>
+                                            <option value="5-10 yrs">5-10 yrs</option>
+                                            <option value="10+ yrs">10+ yrs</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputStyle8" class="form-label">Style</label>
+                                        <div id="styleHelp8" class="form-text">What styles are you interested in?</div>
+                                        <input type="text" class="form-control" id="editInputStyle8" aria-describedby="styleHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputAudi8" class="form-label">Audience</label>
+                                        <div id="audienceHelp8" class="form-text">How many people have you taught?</div>
+                                        <input type="number" min="0" class="form-control" id="editInputAudi8" aria-describedby="audienceHelp">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onclick="SaveLevel8()">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 9 -->
+                <div class="modal fade" id="editModal9" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="editModalLabel9">Details of Activity</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Experience</label>
+                                        <div id="exprHelp9" class="form-text">How long have you been doing this activity?</div>
+                                        <select class="form-control" id="groups-order-by9" data-bp-filter="groups">
+                                            <option value="0-1 yr">0-1 yr</option>
+                                            <option value="2-5 yrs">2-5 yrs</option>
+                                            <option value="5-10 yrs">5-10 yrs</option>
+                                            <option value="10+ yrs">10+ yrs</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputStyle9" class="form-label">Style</label>
+                                        <div id="styleHelp9" class="form-text">What styles are you interested in?</div>
+                                        <input type="text" class="form-control" id="editInputStyle9" aria-describedby="styleHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editInputAudi9" class="form-label">Audience</label>
+                                        <div id="audienceHelp9" class="form-text">How many people have you taught?</div>
+                                        <input type="number" min="0" class="form-control" id="editInputAudi9" aria-describedby="audienceHelp">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onclick="SaveLevel9()">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
