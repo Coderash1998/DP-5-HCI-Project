@@ -36,7 +36,7 @@
                     <div class="input-field">
                         <input type="password" id='myPassword' class="password" placeholder="Enter the password" required>
                         <i class="uil uil-lock icon"></i>
-                        <i class="uil uil-eye showHidePw"></i>
+                        <i class="uil uil-eye uil-eye-slash showHidePw" id="togglePassword"></i>
                         <span id="errorPassword"></span>
                     </div>
 
@@ -54,6 +54,19 @@
             </div>
         </div>
     </div>
+    <script>
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#myPassword");
+
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+
+            // toggle the icon
+            document.getElementById("togglePassword").classList.toggle("uil-eye-slash");
+        });
+    </script>
 
     <!-- <script src="../JS/LogIn.js"></script> -->
 </body>
