@@ -4,17 +4,20 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    padding-top: 3rem;
+    padding-top: 4rem;
     padding-bottom: 3rem;
     color: #5a5a5a;
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 2rem;
+    text-align: center;
 }
 
 .form-box{
     background: #fff;
     /*box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2) 0 5px 5px 0 rgba(0,0,0,0.24);*/
-}
-h2{
-    text-align: center;
 }
 
 .rounded-circle {
@@ -31,4 +34,12 @@ h2{
     50% {
         opacity: 0;
     }
+}
+
+.progress-bar {
+    background-color: #8c8cd1;
+}
+
+.p-5 {
+    padding: 0rem 3rem 3rem;
 }

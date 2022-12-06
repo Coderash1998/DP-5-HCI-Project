@@ -1,7 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    padding-top: 6rem;
+    font-family: 'Raleway', sans-serif;
+    padding-top: 4rem;
     padding-bottom: 3rem;
     color: #5a5a5a;
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 2rem;
+    text-align: center;
 }
 
 .hobby-list-item {
@@ -85,3 +98,6 @@ ul.hobby_list li.hobby_list:not(:last-child) {
     display:none;
 }
 
+.progress-bar {
+    background-color: #8c8cd1;\
+}
