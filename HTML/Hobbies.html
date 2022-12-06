@@ -24,16 +24,16 @@
             <h1 class="title h2 text-center"> Select your Activities</h1>
             <div class="row">
                 <div class="input-group w-25 col">
-                    <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search_activity">
-                    <button class="input-group-text" id="search_activity">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                        </svg>
-                    </button>
+                    <input type="text" id="search_box" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search_activity" onkeyup="search()">
+<!--                    <button class="input-group-text" id="search_activity">-->
+<!--                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">-->
+<!--                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>-->
+<!--                        </svg>-->
+<!--                    </button>-->
                 </div>
                 <div class="col-sm-6"></div>
                 <div class="col">
-                    <button type="button" class="btn btn-light">
+<!--                    <button type="button" class="btn btn-light">-->
                         <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path fill="none" d="M0 0h24v24H0z" />
@@ -42,93 +42,93 @@
                             </g>
                         </svg>
                         Location: Richardson
-                      </button>
+<!--                      </button>-->
                 </div>
             </div>
 
 
-            <div class="row">
-                <div class="col-lg-4 col-sm-6 text-center">
+            <div class="row" id="trial-search">
+                <div class="col-lg-4 col-sm-6 text-center trial">
                     <div class="img-thumbnail">
                         <div class="img-container">
                             <img id="image1" src="../Source/Movies.jpeg" alt="" class="image">
                         </div>
-                        <div class="caption">Movies</div>
+                        <h6 id="titles" class="caption">Movies</h6>
                     </div>
                 </div>
 
 
-                <div class="col-lg-4 col-sm-6 text-center">
+                <div class="col-lg-4 col-sm-6 text-center trial">
                     <div class="img-thumbnail">
                         <div class="img-container">
                             <img id="image2" src="../Source/Old-people-playing-chess.jpg" alt="" class="image">
                         </div>
-                        <div class="caption">Chess</div>
+                        <h6 class="caption">Chess</h6>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-sm-6 text-center">
+                <div class="col-lg-4 col-sm-6 text-center trial">
                     <div class="img-thumbnail">
                         <div class="img-container">
                             <img id="image3" src="../Source/Fishing.jpg" alt="" class="image">
                         </div>
-                        <div class="caption">Fishing</div>
+                        <h6 class="caption">Fishing</h6>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-sm-6 text-center">
+                <div class="col-lg-4 col-sm-6 text-center trial">
                     <div class="img-thumbnail">
                         <div class="img-container">
                             <img id="image4" src="../Source/Camping.jpg" alt="" class="image">
                         </div>
-                        <div class="caption">Camping</div>
+                        <h6 class="caption">Camping</h6>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-sm-6 text-center">
+                <div class="col-lg-4 col-sm-6 text-center trial">
                     <div class="img-thumbnail">
                         <div class="img-container">
                             <img id="image5" src="../Source/Gardening.jpg" alt="" class="image">
                         </div>
-                        <div class="caption">Gardening</div>
+                        <h6 class="caption">Gardening</h6>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-sm-6 text-center">
+                <div class="col-lg-4 col-sm-6 text-center trial">
                     <div class="img-thumbnail">
                         <div class="img-container">
                             <img id="image6" src="../Source/Reading.jpg" alt="" class="image">
                         </div>
-                        <div class="caption">Reading</div>
+                        <h6 class="caption">Reading</h6>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-sm-6 text-center">
+                <div class="col-lg-4 col-sm-6 text-center trial">
                     <div class="img-thumbnail">
                         <div class="img-container">
                             <img id="image7" src="../Source/Music.jpg" alt="" class="image">
                         </div>
-                        <div class="caption">Music</div>
+                        <h6 class="caption">Music</h6>
                     </div>
                 </div>
 
 
-                <div class="col-lg-4 col-sm-6 text-center">
+                <div class="col-lg-4 col-sm-6 text-center trial">
                     <div class="img-thumbnail">
                         <div class="img-container">
                             <img id="image8" src="../Source/Travelling.jpg" alt="" class="image">
                         </div>
-                        <div class="caption">Travelling</div>
+                        <h6 class="caption">Travelling</h6>
                     </div>
                 </div>
 
 
-                <div class="col-lg-4 col-sm-6 text-center">
+                <div class="col-lg-4 col-sm-6 text-center trial">
                     <div class="img-thumbnail">
                         <div class="img-container">
                             <img id="image9" src="../Source/Cooking.jpg" alt="" class="image">
                         </div>
-                        <div class="caption">Cooking</div>
+                        <h6 class="caption">Cooking</h6>
                     </div>
                 </div>
             </div>

@@ -121,7 +121,7 @@
                         <ul id="groups-list" class="row item-list groups-list bp-list list-unstyled grid three">
                             <li id="A" class="item-entry group-has-avatar list-unstyled main-item" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
-                                    <div class="item-cover" style="background-image: url('../Source/Reading2.jpg')"></div>
+                                    <div id="bgImage1" class="item-cover" style="background-image: url('../Source/Reading2.jpg')"></div>
                                     <div class="item-avatar">
                                         <img id="image1" loading="lazy" src="../Source/Reading.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
                                     </div>
@@ -160,7 +160,7 @@
 
                             <li id="B" class="item-entry animate-item odd public group-has-avatar list-unstyled main-item" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
-                                    <div class="item-cover" style="background-image: url('../Source/Gardening2.jpg')"></div>
+                                    <div id="bgImage2" class="item-cover" style="background-image: url('../Source/Gardening2.jpg')"></div>
                                     <div class="item-avatar">
                                         <img id="image2" loading="lazy" src="../Source/Gardening.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
                                     </div>
@@ -201,7 +201,7 @@
                             <li id="C" class="item-entry animate-item odd public group-has-avatar list-unstyled main-item" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
 
-                                    <div class="item-cover" style="background-image: url('../Source/Photography2.jpg')"></div>
+                                    <div id="bgImage3" class="item-cover" style="background-image: url('../Source/Photography2.jpg')"></div>
 
                                     <div class="item-avatar">
                                         <img id="image3" loading="lazy" src="../Source/Photography.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
@@ -256,7 +256,7 @@
 
                             <li id="D" class="item-entry animate-item odd public group-has-avatar list-unstyled main-item" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
-                                    <div class="item-cover" style="background-image: url('../Source/Cooking2.jpg')"></div>
+                                    <div id="bgImage4" class="item-cover" style="background-image: url('../Source/Cooking2.jpg')"></div>
                                     <div class="item-avatar">
                                         <img id="image4" loading="lazy" src="../Source/Cooking.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
                                     </div>
@@ -309,7 +309,7 @@
                             <li id="E" class="item-entry animate-item odd public group-has-avatar list-unstyled main-item" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
 
-                                    <div class="item-cover" style="background-image: url('../Source/Travelling2.jpg')"></div>
+                                    <div id="bgImage5" class="item-cover" style="background-image: url('../Source/Travelling2.jpg')"></div>
 
                                     <div class="item-avatar">
                                         <img id="image5" loading="lazy" src="../Source/Travelling.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
@@ -352,7 +352,7 @@
                             <li id="F" class="item-entry animate-item odd public group-has-avatar list-unstyled main-item" data-bp-item-id="6" data-bp-item-component="groups" style="visibility: visible;">
                                 <div class="list-wrap">
 
-                                    <div class="item-cover" style="background-image: url('../Source/Painting2.jpg')"></div>
+                                    <div id="bgImage6" class="item-cover" style="background-image: url('../Source/Painting2.jpg')"></div>
 
                                     <div class="item-avatar">
                                         <img id="image6" loading="lazy" src="../Source/Painting.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="80" alt="">
@@ -390,9 +390,6 @@
                                                     <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50% Match</div>
                                                 </div>
                                             </p>
-
-
-
                                         
                                                 <button id="button6" class="generic-button list-unstyled" data-bs-toggle="modal" data-bs-target="#viewGroup" onclick="getId(this.id)"><a>View Group</a></button>
                                             
@@ -413,7 +410,7 @@
         <div class="modal" id="viewGroup" tabindex="-1" style="padding-right: 15px;">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header" id="bgModalImage" style="background-image: url(../Source/Reading2.jpg)">
                         <div class="inner">
                             <img id="modalImage" loading="lazy" src="../Source/Reading.jpg" class="avatar group-6-avatar avatar-200 photo" width="100" height="100">
                         </div>
@@ -423,9 +420,9 @@
                         <div class="activity-info">
                             <div class="activity-details">
                                 <p>
-                                    <ax>Date Created:</ax> Nov 12th, 2022</p>
+                                    <ax>Date Created:</ax> <span id="date"> Nov 12th, 2022 </span></p>
                                 <p>
-                                    <ax>Description:</ax> We meet weekly to read and talk about books based on a topic or an agreed-upon reading list.</p>
+                                    <ax>Description:</ax> <span id="desc">We meet weekly to read and talk about books based on a topic or an agreed-upon reading list.</span></p>
                                 <div class="submitx">
                                     <button type="submitx" id="modal_login_submit" class="submit-login" name="wp-submit" data-bs-toggle="modal" data-bs-target="#successFriend">Join Group</button>
                                 </div>

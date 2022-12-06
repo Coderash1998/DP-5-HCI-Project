@@ -140,3 +140,26 @@ function GetSelectedItems() {
         sessionStorage.setItem('hobby'+i, select_hobbies[i-1]);
     }
 }
+
+function search(){
+    let search_text=document.getElementById("search_box").value.toUpperCase();
+    let search_list=document.getElementById("trial-search")
+    let group=search_list.getElementsByClassName("trial")
+    let hobby_name=search_list.getElementsByTagName("h6")
+
+    console.log(hobby_name)
+
+
+    for(let i=0;i<hobby_name.length;i++){
+        let match=group[i].getElementsByTagName('h6')[0]
+        if(match){
+            let textValue=match.textContent || match.innerHTML
+            if(textValue.toUpperCase().indexOf(search_text)>-1){
+                group[i].style.display=""
+            }
+            else{
+                group[i].style.display="none"
+            }
+        }
+    }
+}

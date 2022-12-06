@@ -22,6 +22,22 @@ function getId(id){
     var modalImg = document.getElementById("modalImage")
     modalImg.src=getImage.src
     document.getElementById('modalTitle').innerHTML=getName;
+    if (nameId == "name2") {
+        document.getElementById("hobby").innerHTML = "Chess"
+        document.getElementById("status").innerHTML = "Always ready for a quick game of chess."
+    } else if (nameId == "name3") {
+        document.getElementById("hobby").innerHTML = "Debate, Basketball"
+        document.getElementById("status").innerHTML = "Always eager to dicuss about anything."
+    } else if (nameId == "name4") {
+        document.getElementById("hobby").innerHTML = "Stitching, Art&Craft"
+        document.getElementById("status").innerHTML = "My house is decorated with my art pieces."
+    } else if (nameId == "name5") {
+        document.getElementById("hobby").innerHTML = "Travelling, Tennis, Reading"
+        document.getElementById("status").innerHTML = "A book and plane ticktes are all I need in life."
+    } else if (nameId == "name6") {
+        document.getElementById("hobby").innerHTML = "Cooking"
+        document.getElementById("status").innerHTML = "My recipes are amazing. I love to share them with others."
+    }
 }
 
 function sortTime(){

@@ -18,11 +18,30 @@ function getId(id){
     let nameId="name"+id.replace("button","")
     console.log(nameId)
     let imageId = "image"+id.replace("button","")
+    let bgImageId = "bgImage"+id.replace("button","")
     let getName = document.getElementById(nameId).textContent;
     let getImage = document.getElementById(imageId)
     var modalImg = document.getElementById("modalImage")
+    var bgModalImg = document.getElementById("bgModalImage")
     modalImg.src=getImage.src
+    bgModalImg.style.backgroundImage = document.getElementById(bgImageId).style.backgroundImage
     document.getElementById('modalTitle').innerHTML=getName;
+    if (nameId == "name2") {
+        document.getElementById("date").innerHTML = "Oct 6th, 2021"
+        document.getElementById("desc").innerHTML = "We meet monthly to plant seeds."
+    } else if (nameId == "name3") {
+        document.getElementById("date").innerHTML = "Apr 5th, 2021"
+        document.getElementById("desc").innerHTML = "We meet daily to click more pictures."
+    } else if (nameId == "name4") {
+        document.getElementById("date").innerHTML = "Oct 9th, 2020"
+        document.getElementById("desc").innerHTML = "We meet weekly to try-out receipes."
+    } else if (nameId == "name5") {
+        document.getElementById("date").innerHTML = "Sep 5th, 2020"
+        document.getElementById("desc").innerHTML = "We meet monthly to make travel plans."
+    } else if (nameId == "name6") {
+        document.getElementById("date").innerHTML = "Mar 9th, 2020"
+        document.getElementById("desc").innerHTML = "We meet weekly to paint."
+    }
 }
 function sortName(){
     // var ul=document.getElementById("groups-list")
@@ -122,6 +141,8 @@ function selectOptions(){
     let group_list=document.getElementById("groups-list")
     let group=group_list.getElementsByClassName("main-item")
     let group_name=group_list.getElementsByTagName("h5")
+
+     console.log(group_name)
 
      
     for(let i=0;i<group_name.length;i++){

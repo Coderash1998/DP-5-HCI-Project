@@ -191,7 +191,6 @@ select:not(multiple) {
 
 .modal-header {
     background-color: #5561e2;
-    background-image: url(../Source/Reading2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
