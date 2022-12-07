@@ -236,3 +236,21 @@ function toggle_confirm(){
     
     pwdInput.value = value;
 }
+
+
+// function saveInfo(){
+//     var firstName = document.getElementById("floatingInput1").value;
+//     var lastName = document.getElementById("floatingInput2").value;
+//     var age=document.getElementById("floatingInput3").value;
+//     var city=document.getElementById("floatingInput4").value;
+//     var state=document.getElementById("floatingInput5").value;
+    
+//     sessionStorage.setItem('name', firstName)
+//     sessionStorage.setItem('surname', lastName)
+//     sessionStorage.setItem('age',age)
+//     sessionStorage.setItem('city',city)
+//     sessionStorage.setItem('state',state)
+
+//     var form=document.getElementById('info_form')
+//     form.reset()
+// }

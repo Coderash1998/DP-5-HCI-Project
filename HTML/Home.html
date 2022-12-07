@@ -288,7 +288,7 @@
         
          <div class="popup" id="popup">
             <p>Are you sure you want to log out?</p>
-            <button type="button" onclick="window.location.href='LogIn.html'">Yes</button>
+            <button type="button" onclick="logout()">Yes</button>
             <button type="button" onclick="closePopup()">No</button>
         </div>
     </main>
@@ -302,6 +302,10 @@
         }
         function closePopup(){
             popup.classList.remove("open-popup")
+        }
+        function logout(){
+            window.location.href='LogIn.html'
+            sessionStorage.clear()
         }
     </script>
 </body>
