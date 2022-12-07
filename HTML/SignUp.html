@@ -58,15 +58,15 @@
                               </div>
                             </div>
                           <i class="uil uil-lock icon" class="shwpwdicon"></i>
-                          <i class="uil uil-eye uil-eye-slash showHidePw" id="togglePassword"></i>
+                          <i class="uil uil-eye showHidePw" id="eye-icon" onclick="toggle()"></i>
                           <span id="errorPassword"></span>
                           
                       </div>
                       <div class="input-field">
                        
-                          <input type="password" id='myPassword_recur' class="password popover-class" placeholder="Confirm the password" required>
+                          <input type="password" id='myPassword_recur' class="password popover-class shwpwdicon" placeholder="Confirm the password" required>
                           <i class="uil uil-lock icon"></i>
-                          <i class="uil uil-eye uil-eye-slash showHidePw" id="togglePassword_recur"></i>
+                          <i class="uil uil-eye showHidePw" onclick="toggle_confirm()"></i>
                           <span id="errorPassword_recur"></span>
                          
                       </div>
@@ -99,32 +99,8 @@
           </div>
       </div>
 
-      <script>
-          const togglePassword = document.querySelector("#togglePassword");
-          const password = document.querySelector("#myPassword");
 
-          togglePassword.addEventListener("click", function () {
-              // toggle the type attribute
-              const type = password.getAttribute("type") === "password" ? "text" : "password";
-              password.setAttribute("type", type);
-
-              // toggle the icon
-              document.getElementById("togglePassword").classList.toggle("uil-eye-slash");
-          });
-
-          const togglePassword_recur = document.querySelector("#togglePassword_recur");
-          const password_recur = document.querySelector("#myPassword_recur");
-
-          togglePassword_recur.addEventListener("click", function () {
-              // toggle the type attribute
-              const type = password_recur.getAttribute("type") === "password" ? "text" : "password";
-              password_recur.setAttribute("type", type);
-
-              // toggle the icon
-              document.getElementById("togglePassword_recur").classList.toggle("uil-eye-slash");
-          });
-
-      </script>
+    <script src="../JS/SignUp.js"></script>
 </body>
 
 </html>
