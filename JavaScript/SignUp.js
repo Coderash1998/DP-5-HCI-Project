@@ -210,3 +210,29 @@ function checkNumber() {
     return true;
 
 }
+
+function toggle(){
+    let pwdInput=document.getElementById('myPassword')
+    let icon=document.getElementById('eye-icon')
+    let value=pwdInput.value;
+    if(pwdInput.type === 'password') {
+        pwdInput.type = 'text';
+       
+    }
+    else {
+        pwdInput.type = 'password';
+    }  
+    pwdInput.value = value;
+}
+function toggle_confirm(){
+    let pwdInput=document.getElementById('myPassword_recur')
+    let value=pwdInput.value;
+    if(pwdInput.type === 'password') {
+        pwdInput.type = 'text';
+    }
+    else {
+        pwdInput.type = 'password';
+    }
+    
+    pwdInput.value = value;
+}
