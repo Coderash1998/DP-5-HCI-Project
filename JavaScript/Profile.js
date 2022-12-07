@@ -47,3 +47,15 @@ function saveInfo(){
     var form=document.getElementById('info_form')
     form.reset()
 }
+
+let popup=this.document.getElementById("popup")
+
+function openPopup(){
+    popup.classList.add("open-popup")
+}
+function closePopup(){
+    popup.classList.remove("open-popup")
+}
+function logout(){
+    window.location.href='LogIn.html'
+}
