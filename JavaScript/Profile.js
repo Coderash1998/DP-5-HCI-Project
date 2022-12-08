@@ -58,4 +58,17 @@ function closePopup(){
 }
 function logout(){
     window.location.href='LogIn.html'
+    var form=document.getElementById('info_form')
+    form.reset()
+}
+
+function update(){
+    var age=document.getElementById("floatingInput3").value;
+    var city=document.getElementById("floatingInput4").value;
+    var state=document.getElementById("floatingInput5").value;
+
+    sessionStorage.setItem('age',age)
+    sessionStorage.setItem('city',city)
+    sessionStorage.setItem('state',state)
+
 }
