@@ -7,12 +7,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Re-Connect</title>
     <!-- ===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="../JavaScript/SignUp.js"></script>
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="../CSS/SignUp.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../Source/reconnect_logo.ico" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!--<title>Login & Registration Form</title>-->
     <script>
@@ -33,7 +34,7 @@
 
               <!-- Registration Form -->
               <div class="form signup">
-                  <span class="title">Reconnect</span>
+                  <span class="title"><a href="AboutUs.html" style="text-decoration: none; color: black;">Reconnect</a></span>
 
                   <form action="#" id="signupform">
 
@@ -58,7 +59,7 @@
                               </div>
                             </div>
                           <i class="uil uil-lock icon" class="shwpwdicon"></i>
-                          <i class="uil uil-eye showHidePw" id="eye-icon" onclick="toggle()"></i>
+                          <i class="uil uil-eye uil-eye-slash showHidePw" id="eye-icon" onclick="toggle()"></i>
                           <span id="errorPassword"></span>
                           
                       </div>
@@ -66,7 +67,7 @@
                        
                           <input type="password" id='myPassword_recur' class="password popover-class shwpwdicon" placeholder="Confirm the password" required>
                           <i class="uil uil-lock icon"></i>
-                          <i class="uil uil-eye showHidePw" onclick="toggle_confirm()"></i>
+                          <i class="uil uil-eye uil-eye-slash showHidePw" id="eye-icon-recur" onclick="toggle_confirm()"></i>
                           <span id="errorPassword_recur"></span>
                          
                       </div>
@@ -80,7 +81,7 @@
                       <div class="checkbox-text">
                           <div class="checkbox-content" style="display: initial;">
                               <input type="checkbox" id="termCon">
-                              <label for="termCon" class="text">I accepted all terms and conditions</label>
+                              <label for="termCon" class="text">I accept all terms and conditions</label>
                               <span id="errorTerms" style="top:0px"></span>
                           </div>
                       </div>
@@ -95,6 +96,7 @@
                           <a href="LogIn.html" class="text login-link" >Sign In Now</a>
                       </span>
                   </div>
+
               </div>
           </div>
       </div>

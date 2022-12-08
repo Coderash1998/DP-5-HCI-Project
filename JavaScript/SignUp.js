@@ -215,18 +215,19 @@ function toggle(){
     let pwdInput=document.getElementById('myPassword')
     let icon=document.getElementById('eye-icon')
     let value=pwdInput.value;
+    document.getElementById("eye-icon").classList.toggle("uil-eye-slash");
     if(pwdInput.type === 'password') {
         pwdInput.type = 'text';
-       
     }
     else {
         pwdInput.type = 'password';
-    }  
+    }
     pwdInput.value = value;
 }
 function toggle_confirm(){
     let pwdInput=document.getElementById('myPassword_recur')
     let value=pwdInput.value;
+    document.getElementById("eye-icon-recur").classList.toggle("uil-eye-slash");
     if(pwdInput.type === 'password') {
         pwdInput.type = 'text';
     }
