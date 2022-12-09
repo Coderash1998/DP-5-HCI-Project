@@ -16,7 +16,7 @@ All the pages are static and are limited to HTML, CSS, JavaScript, and BootStrap
 
 There are two ways to run this:
 
-1. You can directly access the webpage through URL hosted at: https://finalprod.d3a9pn36sf6i9j.amplifyapp.com
+1. You can directly access the webpage through URL hosted at: https://devdone.d1pa0kvjirowxf.amplifyapp.com
 2. You can clone this repository and start by opening index.html
 
 
